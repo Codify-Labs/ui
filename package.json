@@ -8,12 +8,16 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "ahooks": "^2.10.9",
+    "babel-plugin-prismjs": "^2.1.0",
     "classnames": "^2.3.1",
+    "hast-util-to-html": "^8.0.1",
     "prismjs": "^1.24.1",
     "react": "^17.0.2",
     "react-codejar": "^1.1.2",
+    "react-copy-to-clipboard": "^5.0.3",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "refractor": "^4.1.0",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

@@ -58,7 +58,7 @@ pre[class*="language-"] {
 @media only screen and (min-width: 600px) {
   code[class*="language-"],
   pre[class*="language-"] {
-    font-size: 1rem; 
+    font-size: 0.9rem; 
   }
 
   pre[class*="language-"] {
@@ -166,9 +166,16 @@ html[class="dark"] .line-highlight {
   }
 }
 
-
+.CODY-EDITOR {
+  padding: 0 !important;
+  padding: 1rem 0rem 1rem 1rem !important;
+}
 .codejar-linenumbers {
-  background-color: transparent !important;
+  background: #f5f6f9 !important;
+  mix-blend-mode: unset !important;
+  color: #f4d546 !important;
+  left: -3px !important;
+  z-index: 1000;
 }
 .codejar-wrap {
   height: 100%;
@@ -192,4 +199,81 @@ html[class="dark"] .line-highlight {
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: hsla(0, 0%, 82%, 1);
+}
+
+html, body, #root {
+  height: 100vh;
+}
+
+.token.tag .attr-value {
+  color: #032f62;
+}
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.function-name,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #0060c9;
+}
+.token.punctuation {
+  color: #a0a0a0;
+}
+code[class*="language-"] {
+  color: black;
+}
+code[class*="language-"] .token.selector,
+code[class*="language-"] .token.attr-name,
+code[class*="language-"] .token.string,
+code[class*="language-"] .token.char,
+code[class*="language-"] .token.function,
+code[class*="language-"] .token.builtin {
+  color: #6f42c1;
+}
+code[class*="language-"] .token.inserted {
+  color: #22863a;
+  background-color: #f0fff4;
+}
+code[class*="language-"] .token.deleted {
+  color: #b31d28;
+  background-color: #ffeef0;
+}
+code[class*="language-"] .token.class-name {
+  color: #6f42c1;
+}
+code[class*="language-"] .code-block {
+  color: #032f62;
+}
+code[class*="language-"] .token.comment,
+code[class*="language-"] .token.block-comment,
+code[class*="language-"] .token.prolog,
+code[class*="language-"] .token.doctype,
+code[class*="language-"] .token.cdata {
+  color: #7D8B99;
+}
+code[class*="language-"] .token.punctuation {
+  color: #a0a0a0;
+}
+code[class*="language-"] .token.operator,
+code[class*="language-"] .token.entity,
+code[class*="language-"] .token.url,
+code[class*="language-"] .token.variable {
+  color: #d73a49;
+  background: rgba(255, 255, 255, 0.5);
+}
+code[class*="language-"] .token.atrule,
+code[class*="language-"] .token.attr-value {
+  color: #004698;
+}
+code[class*="language-"] .token.keyword {
+  color: #d63200;
+}
+code[class*="language-"] .token.regex,
+code[class*="language-"] .token.important {
+  color: #e90;
+}
+code[class*="language-"] .token.string {
+  color: #0a53c1;
 }
