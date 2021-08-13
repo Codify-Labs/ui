@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import "./index.css";
 import "./App.css";
-import HtmlCssTemplate from "./editor/HtmlCssTemplate";
+import JS from "./editor/CSS";
+import Article from "./components/Article";
 
 export default function Lesson() {
   const header = useRef();
@@ -118,45 +119,32 @@ export default function Lesson() {
           height: `${windowHeight - header?.current?.offsetHeight}px`,
         }}
       >
-        <article className="w-1/3 h-full px-4 pt-7 overflow-auto |"></article>
-        <HtmlCssTemplate />
+        <Article />
+        <JS />
       </section>
     </div>
   );
 }
 
 function useWindowSize() {
-  // Initialize state with undefined width/height so server and client renders match
-  // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
   const [windowSize, setWindowSize] = useState({
     width: undefined,
     height: undefined,
   });
   useEffect(() => {
-    // Handler to call on window resize
     function handleResize() {
-      // Set window width/height to state
       setWindowSize({
         width: window.innerWidth,
         height: window.innerHeight,
       });
     }
-    // Add event listener
+
     window.addEventListener("resize", handleResize);
-    // Call handler right away so state gets updated with initial window size
+
     handleResize();
-    // Remove event listener on cleanup
+
     return () => window.removeEventListener("resize", handleResize);
-  }, []); // Empty array ensures that effect is only run on mount
+  }, []);
+
   return windowSize;
 }
-// async function name() {
-//   const jsx = await import("refractor/lang/jsx");
-
-//   refractor.register(jsx.default);
-
-//   setLoaded(true);
-// }
-// useEffect(() => {
-//   name();
-// }, []);

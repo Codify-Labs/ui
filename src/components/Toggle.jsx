@@ -1,6 +1,5 @@
 import cn from "classnames";
 import React from "react";
-import useToggle from "../@hooks/useToggle";
 
 export default function Toggle(props) {
   const { status: liveServer } = props;
@@ -8,11 +7,12 @@ export default function Toggle(props) {
   return (
     <div
       className={cn({
-        "relative w-[3rem] h-6 rounded-full flex items-center cursor-pointer": true,
+        "relative w-[3rem] h-6 rounded-full flex items-center cursor-pointer outline-none": true,
         "bg-[#F3F4F5]": !liveServer,
         "bg-[#E8F3FF] justify-end": liveServer,
       })}
       onClick={props.onChange}
+      {...props}
     >
       <div
         className={cn({
