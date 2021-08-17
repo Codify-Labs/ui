@@ -15,6 +15,7 @@ function IDE(props) {
               lang={file.language}
               active={activeTab === index}
               onClick={() => setActiveTab(index)}
+              key={`index_${file.language}`}
             />
           ))}
         </div>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { refractor } from "refractor";
+import { refractor } from "refractor/lib/common.js";
 import { toHtml } from "hast-util-to-html";
 import cn from "classnames";
 import CopyToClipboard from "react-copy-to-clipboard";
@@ -9,9 +9,14 @@ export default function Code(props) {
   const [code, setCode] = useState(``);
 
   useEffect(() => {
-    setCode(
-      toHtml(refractor.highlight(props.value, props.language.toLowerCase()))
-    );
+    console.log(props);
+    try {
+      setCode(
+        toHtml(refractor.highlight(props.value, props.language.toLowerCase()))
+      );
+    } catch (error) {
+      console.log(error);
+    }
   }, []);
 
   return (

@@ -5,7 +5,6 @@ import { visit } from "unist-util-visit";
 
 import Code from "./Article/Code";
 import Info from "./Article/Info";
-import InlineCode from "./Article/InlineCode";
 
 export default function Article(props) {
   const markDown = `### Paragraflar yaratish
@@ -18,7 +17,7 @@ export default function Article(props) {
   \`<p>..</p>\` Teglari matinni boshqa matinlarga qo'shmasdan, yangi qatordan, yuqori va pastki tarafidan bo'sh joy hosil qiladi.
   :::
   
-  ~~~html
+  ~~~css
   Lorem ipsum dolor sit amet
   
   <p>Lorem ipsum dolor sit amet</p>
