@@ -53,7 +53,7 @@ export default function Article(props) {
   <p>
   ~~~
   
-  :::main{#info}
+  :::main{#warn}
   ##### 💡 Eslatma
   
   Tepadagi berilayotkan kodlarning hammasini, o'ng tarafdagi *redaktorimizda* yozib, amalda sinab, ko'rib boring!

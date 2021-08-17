@@ -224,19 +224,12 @@ html, body, #root {
   height: auto !important;
 }
 
-#success {
-  background-color: #F3FFF3;
-}
-
-#success *{
-  color: #03A700;
-}
 
 #warn {
   background-color: rgba(255, 255, 0, 0.2);
 }
 #warn *{
-  color: #BD8800;
+  color: #BD8800 !important;
 }
 #info {
   background-color: #E8EFFF;
@@ -250,13 +243,20 @@ html, body, #root {
 }
 
 #error * {
-  color: #FE0000;
+  color: #FE0000 !important;
 }
 
 #p-0 {
   padding-bottom: 0 !important;
 }
 
+#success {
+  background-color: #F3FFF3;
+}
+
+#success *{
+  color: #03A700 !important;
+}
 
 
 .last-child > :last-child{
