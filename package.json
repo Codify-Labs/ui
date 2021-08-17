@@ -25,7 +25,7 @@
     "react-scripts": "4.0.3",
     "react-simple-tooltip": "^2.6.3",
     "react-tooltip": "^4.2.21",
-    "refractor": "^4.1.0",
+    "refractor": "^4.1.1",
     "rehype-raw": "^6.0.0",
     "remark-directive": "^2.0.0",
     "unist-util-visit": "^4.0.0",
