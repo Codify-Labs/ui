@@ -5,8 +5,8 @@ import useToggle from "../../@hooks/useToggle";
 import Safari from "../../components/Safari";
 import IDE from "../../components/IDE";
 
-export default function Index() {
-  const [liveServer, toggleLiveServer] = useToggle();
+export default function Index(props) {
+  const [liveServer, toggleLiveServer] = useToggle(true);
 
   const [htmlCode, setHtmlCode] = useState(``);
   const [browserCode, setBrowserCode] = useState(``);
@@ -16,7 +16,7 @@ export default function Index() {
       ext: "index.html",
       name: "index.html",
       language: "html",
-      value: "<h1>Alhamdulillah</h1>",
+      value: htmlCode,
       onChange: setHtmlCode,
     },
   ];
@@ -32,7 +32,7 @@ export default function Index() {
   }, [liveServer, htmlCode]);
 
   return (
-    <section className="w-2/3 flex">
+    <section className="flex" style={{ width: props.width }}>
       <IDE
         editor={editors}
         liveServer={liveServer}
@@ -48,21 +48,50 @@ export default function Index() {
     if (!liveServer && !force) {
       return;
     }
-    //
-    const passed = new RegExp(
-      `console\\.log\\(\\["([^]+)\\"]\\);?`,
-      `igm`
-    ).test(htmlCode.replace(/\s/g, ""));
 
-    if (passed) {
-      // Do something
-      // ...
-      // ...
-
-      alert("WooHoo!");
-    }
-
-    //
     setBrowserCode(`${htmlCode}`);
   }
 }
+
+// import chai from "chai";
+// window.chai = chai;
+//  const passed = eval(`
+//       let code = htmlCode;
+//       function testCode() {
+//         let testsPassed = false;
+//         const chai = window.chai;
+
+//         const assert = chai.assert;
+
+//         try {
+//           ${props.tests}
+//           testsPassed = true;
+//         } catch (error) {
+//           console.log(error);
+//             testsPassed = false;
+//         }
+
+//         return testsPassed;
+//     }
+
+//       testCode();
+// `);
+
+// if (passed) {
+//   // Do something
+//   // ...
+//   // ...
+
+//   alert("WooHoo!");
+// }
+// const tests = `
+//       const strippedCode = code.replace(/\\s/g, "");
+
+//       assert.include('foobar', 'baz', "string doesn't contain substring");
+
+//       const passed = new RegExp("<h1>IDEASFROMME</h1>","igm").test(strippedCode);
+
+//       if(!passed) {
+//         throw new Error("IDEAS FROM ME does not have!");
+//       }
+//   `;

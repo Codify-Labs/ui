@@ -1,10 +1,19 @@
-import { useEffect, useRef, useState } from "react";
+import { lazy, Suspense, useRef, useState } from "react";
 import "./index.css";
 import "./App.css";
-import JS from "./editor/CSS";
 import Article from "./components/Article";
+import useWindowSize from "./@hooks/useWindowSize";
 
 export default function Lesson() {
+  // -----------
+  // All data that'll come from server
+  const [state, setstate] = useState("");
+  const lang = "HTML";
+  const Template = {
+    IDE: lazy(() => import(`./editor/${lang}`)),
+  };
+  // -----------
+
   const header = useRef();
   const { height: windowHeight } = useWindowSize();
 
@@ -119,32 +128,12 @@ export default function Lesson() {
           height: `${windowHeight - header?.current?.offsetHeight}px`,
         }}
       >
-        <Article />
-        <JS />
+        <Article width={`33.3333%`} />
+
+        <Suspense fallback={<div>Yuklanmoqda...</div>}>
+          <Template.IDE src={state} width={`66.7777777%`} />
+        </Suspense>
       </section>
     </div>
   );
-}
-
-function useWindowSize() {
-  const [windowSize, setWindowSize] = useState({
-    width: undefined,
-    height: undefined,
-  });
-  useEffect(() => {
-    function handleResize() {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    }
-
-    window.addEventListener("resize", handleResize);
-
-    handleResize();
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  return windowSize;
 }

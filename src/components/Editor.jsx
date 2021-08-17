@@ -35,7 +35,6 @@ export default function Editor(props) {
               editor.innerHTML = toHtml(root);
             }}
             lineNumbers={lineNumbers || false}
-            className={className}
           />
         </pre>
       </div>

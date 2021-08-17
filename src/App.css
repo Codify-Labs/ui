@@ -2,9 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
 
 html{
     font-family: 'Nunito', sans-serif;
 }
+
+#article {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+#article h1 {
+    @apply text-[2.25rem] font-extrabold pb-7;
+}
+
+#article h2 {
+    @apply text-3xl font-semibold pb-7;
+}
+
+#article h3 {
+    @apply text-2xl font-semibold pb-7;
+}
+
+#article h4 {
+    @apply text-xl font-semibold pb-7;
+}
+
+#article h5 {
+    @apply text-lg font-semibold pb-7;
+}
+
+#article h6 {
+    @apply text-sm font-semibold pb-7;
+}
+
+#article p {
+    @apply pb-7;
+    padding-bottom: 2rem;
+    line-height: 1.9;
+    font-size: 0.9rem;
+    color: #10162f;
+    color: #0d1536d1;
+}
+
+#article ul {
+    @apply list-disc ml-4 pb-7;
+}
+
+#article li {
+    @apply pb-2 leading-7;
+}
+
+#article code {
+    @apply mx-1 text-[#FA7D6C] font-semibold bg-[#FFF6F6] px-1 rounded-md border-[1px] border-[#ffb8af];
+    font-family: 'JetBrains Mono', monospace;
+    color: #FA7D6C !important;
+    font-size: 0.95rem !important;
+}
+
+#article em {
+    @apply text-[#017AFF] not-italic font-extrabold;
+}
+
+#article a {
+    @apply text-[#017AFF] not-italic font-extrabold border-b-2 border-dashed border-[#017AFF] hover:bg-blue-50 duration-200;
+}
+
