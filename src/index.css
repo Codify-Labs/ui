@@ -260,3 +260,12 @@ html, body, #root {
 .last-child > :last-child{
   padding-bottom: 0rem !important;
 }
+
+.check::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 45%;
+  z-index: 10;
+  width: 2px;
+}
