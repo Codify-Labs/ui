@@ -41,7 +41,7 @@ export default function Code(props) {
         ></div>
       </pre>
 
-      <div className="absolute bottom-3 right-2 w-10 h-10">
+      <div className="absolute bottom-10 right-2 w-10 h-10">
         <CopyToClipboard text={props.value} onCopy={() => onCopy()}>
           <div className="bg-white rounded-[15px] w-full  h-full opacity-0 flex transform transition duration-300 group-hover:opacity-100 items-center justify-center cursor-pointer">
             <svg

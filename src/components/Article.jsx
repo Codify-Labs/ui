@@ -145,12 +145,12 @@ function Article(props) {
   return (
     <div className="h-full overflow-auto px-2" style={{ width: props.width }}>
       <article className="px-3" id="article">
-        <h1 className="py-7">HTML - Sarlavhalar</h1>
+        <h1 className="py-7">HTML - Attributlar</h1>
 
-        {/* <Markdown src={markdown} /> */}
+        <Markdown src={markdown} />
       </article>
 
-      <div className="exercsices">
+      <div className="exercsices pb-10">
         <div className="title | flex items-end | px-4 my-7 mb-12 |">
           <div className="icon">
             <svg
@@ -197,6 +197,9 @@ function Article(props) {
             Praktika
           </h1>
         </div>
+        <Exersice completed={true} />
+        <Exersice completed={false} />
+        <Exersice completed={false} />
         <Exersice />
       </div>
     </div>

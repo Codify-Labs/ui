@@ -269,3 +269,6 @@ html, body, #root {
   z-index: 10;
   width: 2px;
 }
+.ReactCollapse--collapse {
+  transition: height 500ms;
+}
