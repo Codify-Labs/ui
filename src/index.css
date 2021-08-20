@@ -214,8 +214,8 @@ html, body, #root {
 }
 
 
-#article code::before, #article code::after {
-  content: "`";
+#article code{
+  word-wrap: normal;
 }
 
 #article > pre {

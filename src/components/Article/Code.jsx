@@ -9,7 +9,6 @@ export default function Code(props) {
   const [code, setCode] = useState(``);
 
   useEffect(() => {
-    console.log(props);
     try {
       setCode(
         toHtml(refractor.highlight(props.value, props.language.toLowerCase()))
@@ -20,7 +19,7 @@ export default function Code(props) {
   }, []);
 
   return (
-    <div className="w-full relative group mb-7">
+    <div className="w-full relative group pb-7">
       <div className="flex items-center justify-end">
         <h6
           className="bg-[#F5F6F9] rounded-t-lg text-[#5F5F5F] font-bold"

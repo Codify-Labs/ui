@@ -8,19 +8,19 @@ export default function Header(props) {
 
   return (
     <header
-      ref={props.refs}
-      className="w-full px-6 py-3 flex items-center justify-between"
+      className={`w-full px-6 py-3 flex items-center justify-between | relative`}
       style={{
         boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.01)",
       }}
+      ref={props.refs}
     >
       <section
-        className={`flex h-full | absolute top-0 left-0 w-[30%] bg-white ${
-          !menu && "-left-96 hidden"
+        className={`h-full | absolute top-0 left-0 | bg-white ${
+          !menu && "hidden"
         }`}
         style={{ zIndex: 1000000 }}
       >
-        <div className="fixed overflow-y-auto h-full w-inherit ">
+        <div className="fixed overflow-y-auto h-full w-[33%]">
           <div className="sticky top-0 pt-2 px-2 z-20 bg-white shadow-100">
             <div className="card | sticky top-3 | rounded-md w-full bg-[#61dafb] z-20">
               <div className="info flex pl-2">
@@ -45,7 +45,7 @@ export default function Header(props) {
                       ReactJs
                     </h1>
                     <div className="w-4/5 ml-8 mt-1">
-                      <CourseProgress progress={23} />
+                      <CourseProgress progress={23} color={`#00000033`} />
                     </div>
                   </div>
 

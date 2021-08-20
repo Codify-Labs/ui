@@ -1,19 +1,4 @@
-import { useEffect, useState } from "react";
-
 function CourseProgress(props) {
-  const [progress, setProgress] = useState(0);
-
-  useEffect(() => {
-    if (progress === 100) {
-      return;
-    }
-    var int = setInterval(() => {
-      setProgress(progress + 10);
-    }, 30);
-
-    return () => clearInterval(int);
-  }, [progress]);
-
   return (
     <>
       <div
@@ -21,8 +6,8 @@ function CourseProgress(props) {
         style={{ backgroundColor: props.color }}
       >
         <div
-          className="bg-white h-[0.25rem] rounded-[10px] duration-300"
-          style={{ width: `${progress}%` }}
+          className="bg-white h-[0.25rem] rounded-[10px] duration-500"
+          style={{ width: `${props.progress}%` }}
         />
       </div>
     </>

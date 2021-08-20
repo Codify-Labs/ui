@@ -33,13 +33,19 @@ html{
     @apply text-lg font-semibold pb-7;
 }
 
+#article img {
+    @apply rounded-[7px] w-full;
+}
+
+
 #article h6 {
     @apply text-sm font-semibold pb-7;
 }
-
-#article p {
+#article ol {
+    @apply list-decimal pb-7 pl-6;
+}
+#article p, #article li {
     @apply pb-7;
-    padding-bottom: 2rem;
     line-height: 1.9;
     font-size: 0.9rem;
     color: #0d1536d1;

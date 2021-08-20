@@ -1,5 +1,5 @@
-import Code from "./Code";
-import Info from "./Info";
+import Code from "../Article/Code";
+import Info from "../Article/Info";
 
 export default {
   code: (value) => {
