@@ -1,11 +1,4 @@
-import Level from "../Level";
-import ModuleArticle from "../ModuleArticle";
-import CourseProgress from "../CourseProgress";
-import useToggle from "../../@hooks/useToggle";
-
 export default function Header(props) {
-  const [menu, toggleMenu] = useToggle(false);
-
   return (
     <header
       className={`w-full px-6 py-3 flex items-center justify-between | relative`}
@@ -14,166 +7,6 @@ export default function Header(props) {
       }}
       ref={props.refs}
     >
-      <section
-        className={`h-full | absolute top-0 left-0 | bg-white ${
-          !menu && "hidden"
-        }`}
-        style={{ zIndex: 1000000 }}
-      >
-        <div className="fixed overflow-y-auto h-full w-[33%]">
-          <div className="sticky top-0 pt-2 px-2 z-20 bg-white shadow-100">
-            <div className="card | sticky top-3 | rounded-md w-full bg-[#61dafb] z-20">
-              <div className="info flex pl-2">
-                <div className="course__img w-1/5 flex items-center justify-center">
-                  <img
-                    src="https://laracasts.s3.amazonaws.com/series/thumbnails/beginning-react.png"
-                    alt="course__image"
-                    className="w-11/12"
-                  />
-                </div>
-
-                <div className="course__info | w-4/5 | py-3 px-2 | relative |">
-                  <span
-                    className="absolute  top-0 right-3 text-sm text-white font-extrabold "
-                    style={{ fontSize: "0.75rem" }}
-                  >
-                    {23}
-                    <span style={{ fontSize: "0.7rem" }}>%</span>
-                  </span>
-                  <div className="flex items-center w-full ">
-                    <h1 className="font-extrabold text-lg text-white w-1/5">
-                      ReactJs
-                    </h1>
-                    <div className="w-4/5 ml-8 mt-1">
-                      <CourseProgress progress={23} color={`#00000033`} />
-                    </div>
-                  </div>
-
-                  <div className="flex items-center justify-between  pt-3">
-                    <div className="level flex items-center">
-                      <div className="flex-col ml-1">
-                        <p className="text-xs text-white font-bold">Daraja:</p>
-                        <Level level={3} white={true} />
-                      </div>
-                    </div>
-                    <div className="hours flex items-center">
-                      <svg
-                        className="w-7 h-7"
-                        viewBox="0 0 10 10"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M9.60294 5.30147C9.60294 7.67681 7.67728 9.60294 5.30147 9.60294C2.92613 9.60294 1 7.67681 1 5.30147C1 2.92566 2.92613 1 5.30147 1C7.67728 1 9.60294 2.92566 9.60294 5.30147Z"
-                          stroke="white"
-                          stroke-width="0.75"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M7.25036 5.65819L5.1438 5.62378V3.36981"
-                          stroke="white"
-                          stroke-width="0.75"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                      <div className="flex-col ml-1 pt-">
-                        <p className="text-xs text-white font-bold">
-                          Davomiyligi:
-                        </p>
-
-                        <p className="text-[10px] text-white font-bold">
-                          15 Soat
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="hours flex items-center">
-                      <svg
-                        className="w-7 h-7"
-                        viewBox="0 0 10 10"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M1.14706 5.30147C1.14706 8.52734 2.22266 9.60294 5.44854 9.60294C8.67441 9.60294 9.75001 8.52734 9.75001 5.30147C9.75001 2.0756 8.67441 1 5.44854 1C2.22266 1 1.14706 2.0756 1.14706 5.30147Z"
-                          stroke="white"
-                          stroke-width="0.75"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M3.91293 6.83707L4.64487 4.498L6.98394 3.76605L6.252 6.10466L3.91293 6.83707Z"
-                          stroke="white"
-                          stroke-width="0.75"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                      <div className="flex-col ml-1">
-                        <p className="text-xs text-white font-bold">
-                          Modullar:
-                        </p>
-                        <p className="text-[10px] text-white font-bold">
-                          3 modul
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="| px-2 rounded-[0.5rem] bg-white">
-            <div className="cirriculum py-5">
-              <div className="module mb-3">
-                <div className="module__intro flex items-center relative bg-[#F7F7F7] px-5 py-3 rounded-md | group ">
-                  <p className="text-sm text-black font-bold">1.</p>
-                  <h3 className="text-sm font-bold ml-5">
-                    HTML - Veb Asoslari
-                  </h3>
-                </div>
-
-                <ul className={`px-7 py-3 `}>
-                  <ModuleArticle
-                    article={{ completed: true, last: false }}
-                    key={1}
-                  />
-                  <ModuleArticle
-                    article={{ completed: true, last: false }}
-                    key={2}
-                  />
-                  <ModuleArticle
-                    article={{
-                      completed: true,
-                      last: false,
-                      active: true,
-                    }}
-                    key={3}
-                  />
-                  <ModuleArticle
-                    article={{ completed: false, last: false }}
-                    key={4}
-                  />
-                  <ModuleArticle
-                    article={{ completed: false, last: true }}
-                    key={5}
-                  />
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <div className="flex items-center justify-center">
         <div className="logo">
           <svg
@@ -198,11 +31,7 @@ export default function Header(props) {
           </svg>
         </div>
 
-        <div
-          className="menu px-4 py-[10px] ml-12 flex items-center justify-center bg-[#F6F6F6] rounded-[6px] hover:bg-gray-100 cursor-pointer "
-          onClick={() => toggleMenu()}
-        >
-          <h1 className="font-medium pr-3">O'quv dasturi</h1>
+        <div className="menu px-3 py-4 ml-12 flex items-center justify-center hover:bg-[#F6F6F6] rounded-[6px] cursor-pointer ">
           <ul>
             <li className="mb-2 w-7 h-[2px] bg-gray-900 rounded-full"></li>
             <li className="mt-2 w-7 h-[2px] bg-gray-900 rounded-full"></li>
@@ -255,10 +84,7 @@ export default function Header(props) {
 
             <h1 className=" ml-3 text-md">Orqaga</h1>
           </div>
-          <div
-            className="| px-7 py-2 ml-10 | flex items-center justify-center bg-[#017AFF] text-white font-bold rounded-[7px] click:scale"
-            onClick={() => toggleMenu()}
-          >
+          <div className="| px-7 py-2 ml-10 | flex items-center justify-center bg-[#017AFF] text-white font-bold rounded-[7px] click:scale">
             <h1 className="font-bold mr-3 text-lg">Davom</h1>
             <svg
               className="w-[9px] transform rotate-180"

@@ -37,7 +37,6 @@ pre[class*="language-"] {
   background: var(--background);
   font-family: "JetBrains Mono", monospace;
 
-
   font-size: 1rem;
   line-height: 2em;
   border-radius: 8px 8px 0px 0px;
@@ -52,10 +51,6 @@ pre[class*="language-"] {
   -ms-hyphens: none;
   hyphens: none;
   box-sizing: border-box;
-}
-
-#article pre {
-  border-radius: 7px 0px 7px 7px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -173,8 +168,7 @@ html[class="dark"] .line-highlight {
 }
 
 .CODY-EDITOR {
-  padding: 0 !important;
-  padding: 1rem 0rem 1rem 1rem !important;
+  padding: 1rem !important;
 }
 
 .codejar-linenumbers {
@@ -214,10 +208,6 @@ html, body, #root {
 }
 
 
-#article code{
-  word-wrap: normal;
-}
-
 #article > pre {
   height: auto !important;
 }
@@ -242,10 +232,6 @@ html, body, #root {
 
 #error * {
   color: #FE0000 !important;
-}
-
-#p-0 {
-  padding-bottom: 0 !important;
 }
 
 #success {

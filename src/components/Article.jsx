@@ -3,149 +3,130 @@ import Markdown from "./Markdown/Markdown";
 import Exersice from "./Article/Exersice";
 
 function Article(props) {
-  const [markdown] = useState(`## Attributlar nima?
+  const [markdown] =
+    useState(`Havola bu foydalanuvchilarga bir sayttan ikkinchi saytga o'tishni ta'minlaydi.
 
-  Attributlar, teglar bilan ishlashda eng kerakli narsa (o'zbekcha: "Xususiyat" ma'nosi).
-  
-  Attributlar teglarda qo'shimcha funksional yaratishga va ularga xususiyat berishga imkon beradi. Attributlarni [self-closing](#self_closing)lardan boshqa, xohlagan teglarga qo'shsa bo'ladi.
-    
-  Keling atributlarning qanday ajoyibot ekaligini, va ularni foydalanishning ba'zi misollarini ko'rib chiqaylik.
-  
-  ## Attributlarning sintaksisi
-  
-  Attributlarni ishlatishdagi bazi bir qoidalar:
-  
-  1. Deyarli hamma teglarda attribut qo'shish imkoni bor
-  2. Attributlar teglarga turli xil funksional qo'shadi
-  3. Ular *ochilish* tegi ichidan yoziladi
-  4. Sintaksisi *nom="qiymat"* shaklida bo'ladi.
-  
-  Attributga misol:
-  
-  ~~~html
-  <p title="Soat 21:00 - da">
-      Barcelon vs Real Madrid
-  </p>
-  ~~~
-  
-  :::main{#info}
-  O'ng tarfdagi *redaktorimizda* sinab ko'ring!
-  :::
-  
-  Sichqonchani *Barcelon vs Real Madrid* matini ustiga oborib 1 soniya ushlab tursak, *Soat 21:00 - da*  sharhi chiqadi.
-  
-  Mana shunday ko'plab funksinallar aynan *attributlar* yordamida bajariladi. Masalan \`onclick="alert('Mening ismim ...')"\` attributi, teg ustiga bosilganda 👆 *Mening ismim ...* xabarini ekranga chiqaradi.
-  
-  Mavjud bo'lgan *attributlar* yetarlicha (100talab mavjud):
-  
-  \`href\`, \`title\`, \`lang\`, \`class\`, \`id\`, \`onclick\` va h.k. Lekin, eng kerakli (90% vaziyatlarda ishlatiladigan) attributlarning xammasini ko'rib o'tamiz.
-  
-  Demak attributlar shu tarzda yozilar ekan:
-  
-  ![Attribut ko'rinishi](https://imglink.io/ib/78CLrKgmGc.png)
-  
-  Keyingi qadam bizga kerakli bo'lgan barcha *attributlarning* hammasini, qayerda? qanday? va nima uchun? degan sorovlar orqali birin ketin ko'rib chiqish.
-  
-  ### 1. *title* attributi
-  
-  ##### Nima uchun?
-  
-  *Title* - attributi HTML elementning (HTML teg) mazmuni haqida tushuntirish matnini taqdim etish uchun ishlatiladi.
-  
-  ##### Qayerda?
-  
-  :::main{#success}
-  #### Eslab qoling
-  
-  Hamma attributlar Tegning ochilish qismida yoziladi. Tepada ko'rsatilgan rasmga qarang!
-  :::
-  
-  Shuning uchun <strong>qayerda?</strong> so'rovini olib tashlaymiz.
-  
-  ##### Qanday?
-  
-  Xuddi \`attributNomi="Qiymat"\` shaklida. Bu yerda \`title="qiymat"\` shaklida bo'ladi.
-    
-  Bu qanday ishlashini tushunish uchun quyidagi misolni sinab ko'ring.
-    
-  ~~~html
-  <h1 title="Davlat Test Markazi">
-      DTM
-  </h1>
-  ~~~
-  
-  Sichqonchani *DTM* qisqartmasi usitga oborganimizda, *Davlat Test Markazi* izohini taqdim etadi.
-  
-  ### 2. *style* attributi
-  
-  ##### Nima uchun?
-  
-  \`<style>...</style>\` teglari o'rnini bosish uchun. Style atributi to'g'ridan-to'g'ri element ichida rang, shrift, va boshqalar kabi CSS uslublarini va oidalarini belgilashda imkon beradi.
-  
-  Keling, qanday ishlashini ko'rib, amalda sinab ko'raylik:
-    
-  ~~~html
-  <p style="color: blue;">
-      Ko'k matin
-  </p>
-  ~~~
-  
-  Mana shuning bilan bir natija, farqi *style="color: blue;"*  attributi bilan kodimiz ancha qisqaroq:
-  
-  ~~~html
-  <p>
-      Ko'k matin
-  </p>
-  
-  <style>
-      p {
-          color: blue;
-      }
-  </style>
-  ~~~
-  
-  ### 3. *src* attributi
-  
-  ##### Nima uchun?
-  
-  Ekrang rasm chiqarish uchun qo'llaniladi. Va \`<img />\` tegi bilan shartli tarzda ishlatiladi.
-  
-  :::main{#info}
-  ### Yangi teg
-  
-  Ekranga rasm \`<img />\` tegi + \`src\` atributi orqali uzatiladi
-  :::
-  
-  ##### Qanday?
-    
-  \`<img src="rasm-linki"/>\` - bu yerda *src* qiymatiga rasm linkini joylaymiz.
-  
-  O'zbekiston flagining [rasmi](https://cdn.britannica.com/47/7247-004-44F420D7/Flag-Uzbekistan.jpg) (https://cdn.britannica.com/47/7247-004-44F420D7/Flag-Uzbekistan.jpg)
-    
-  ~~~html
-  <img src="https://cdn.britannica.com/47/7247-004-44F420D7/Flag-Uzbekistan.jpg" />
-  ~~~
-    
-  Bu yerda *src* attributimizning *qiyamtiga* xohlagan rasm linkini joylasak bo'ladi.
-  
-  Shularni sinab ko'ring (Rasm *linkini* nusxalab *src* ga qo'yasiz):
-    
-  1. [Messi](https://imgresizer.eurosport.com/unsafe/1200x0/filters:format(jpeg):focal(1404x222:1406x220)/origin-imgresizer.eurosport.com/2021/05/17/3134648-64248688-2560-1440.jpg)
-  2. [Kuz](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1D07TzQkGLrMWn9je6vF_3udKttdnB9tCI3s2cenBiyRHS_bgtV0uMDq_Ff3oGhXVnFY&usqp=CAU)
-  3. [Palma](https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg)
-    
-  ### 4. *Class* va *id* attributlari
-    
-  Bular siz uchun ajoyib kashfiyot bo'ladi! Ishonavering.
-  
-  Bular orqali siz CSS da mojizalar qilishni boshlaysiz. Lekin xozircha bu attributlarni o'rganish sal ertaroq, shuning uchun keyinroqqa qoldiramiz.
-  
-  Attributlar anchadan-ancha ko'p, shuning uchun bularning ko'pini amalda <strong>yangi teglar</strong> bilan o'rganayotkanimizda, ularga attributlar orqali yangi-yangi funcksionallar qo'shib, amalda sinab, qo'llab ko'pini InshaAllah o'rganasiz!
-  `);
+Sichqonchani havola ustida obirganda, sichqoncha kichik qo'lga aylanadi 👆.
+
+Misol tariqasida [google.com](#) sayti:
+
+![LINK](https://i.ibb.co/NCwB26G/LINK.gif)
+
+### Havola sintaksisi
+
+Havolalar \`<a>\` HTML elementi (tegi) yordamida yaratiladi. Orasiga beriladikan matin, bosish mumkun bo'lgan havolaga aylanadi, va \`href\` attributi yordamida saytga havola qoldirasiz:
+
+:::main{#info}
+Havola \`inline\` (Cheklangan) element
+:::
+
+~~~html
+Mana shu <a href="https://kun.uz">havola:</a>
+~~~
+
+Qiziqarli tomoni \`a\` tegi kontentiga nima joylasangiz o'sha havolaga aylanadi.
+
+Misol rasm joylaymiz:
+
+~~~html
+Rasm bilan havola
+<a href="https://kun.uz">
+    <img 
+        src="https://i.ibb.co/Yj4M1f2/1200px-Facebook-Logo-2019.webp" 
+        width="100" 
+        height="100" 
+    />
+</a>
+~~~
+
+:::main{#success}
+Rasmgning o'chamlarini \`width\` va \`height\` orqali o'zgartsa bo'ladi.
+:::
+
+Havolaning umumiy tuzilishi:
+
+![LINK_TAG](https://i.ibb.co/QKb36dt/Group-12-1.png)
+
+### Havola ko'rinishi
+
+Shuningdek, havolalar barcha brauzerlarda quyidagicha ko'rinish oladi:
+
+- Xali ustiga bosilmagan havola chizilgan va ko'k rangda
+- Bosilgan havola chizilgan va binafsha rangda
+- Faol havola (Ustiga bosip turulganda) chizilgan va qizil rangda
+
+:::main{#info}
+Albatta *CSS* yordamida buni o'zgartirsa bo'ladi.
+:::
+
+### *Target* Attributi
+
+\`a\` tegini bosganingizda shu saytning ustidan yangi saytga o'tiladi.
+
+\`Target\` attributi havolani qayerdan ochilishini belgilaydi.
+
+Uning qiymatiga 4ta qiymat turini berish mumkun, ular quyidagilar:
+
+#### 1. \`_self\`
+
+Hujjat bosilgan oynadan ochadi. Yozish shart emas! (*default* qiymat)
+
+#### 2. \`_blank\`
+
+Saytni yangi *tabdan* (oynadan) ochadi.
+
+#### 3. \`_parent\`
+
+Saytni yuqori freymda ochadi
+
+#### 4. \`_top\`
+
+Saytni oynaning to'liq qismida ochadi
+
+Eng ko'p qo'llaniladigani bu \`_blank\` qiymati:
+
+~~~html
+<a target="_blank" href="https://google.com">Google.com</a>
+~~~
+
+### Absolut URL vs Relative URL
+
+Tepadagi barcha misollarda *src* attributi qiymatiga *absolut* sayt manzili kiritildi.
+
+:::main{#success}
+Sayt manzilini *URL* deb nomlash tog'riroq bo'ladi
+:::
+
+![IMAGE_URL](https://i.ibb.co/tsB9k5J/Group-14.png)
+
+\`https://devilla.uz/about\`ning Relative va Absolut URL lari:
+
+1. Relative URL sayt manzilining (URL) ning *directory* (*/about*) qismi.
+2. Absolut URL bu sayt manzilining (URL) to'liq nomi: \`https://devilla.uz/about\`.
+
+Agarda sizning saytingiz [devilla.uz](#) *domenida* bo'lsa va shu saytning o'ziga \`https://devilla.uz/about\` havolasi bilan yo'naltirmoqchi bo'lsangiz *directory* qismini yozish kifoya:
+
+~~~html
+<a href="/about">devilla.uz<a>
+~~~
+
+Mana shu ham bir hil natijani beradi:
+
+~~~html
+<a href="https://devilla.uz/about">devilla.uz<a>
+~~~
+
+Lekin siz [devilaa.uz](#)dan turib [google.com](#) saytiga yo'naltirmoqchi bo'lsangiz, Absolut URL ishlatishingiz shartli bo'ladi:
+
+~~~html
+<a href="https://google.com">google.com<a>
+~~~
+`);
+
   return (
     <div className="h-full overflow-auto px-2" style={{ width: props.width }}>
       <article className="px-3" id="article">
-        <h1 className="py-7">HTML - Attributlar</h1>
+        <h1 className="py-7">HTML - Sarlavhalar</h1>
 
         <Markdown src={markdown} />
       </article>
@@ -197,10 +178,70 @@ function Article(props) {
             Praktika
           </h1>
         </div>
-        <Exersice completed={true} />
-        <Exersice completed={false} />
-        <Exersice completed={false} />
-        <Exersice />
+        <Exersice
+          completed={true}
+          body={`Mana shu formulani HTML yordamida jonli saytga aylantiring:
+><p>1) a<sup>2</sup> - b<sup>2</sup> = (a + b)(a - b)</p>
+>
+> <p>2) log<sub>2</sub>2 = 1</p>
+
+
+:::main{#warn}
+Indekslardan foydalaning!
+:::
+`}
+          solution={`1) Birinchi, *a* ikkinchi darajada, demak *tepa indeksi* \`<sup>..</sup>\` tegidan foydalanib, 2 sonini shu teg orasiga joylashtiramiz:
+~~~html
+a<sup>2</sup>
+~~~
+
+Natija esa xuddi mashqdagidek, keyingi fazifa *b* ni 2chi darajaga ko'tarish. Bu ham xuddi tepadagidek echim oladi.
+
+~~~html
+a<sup>2</sup> - b<sup>2</sup> = (a + b)(a - b)
+~~~
+
+
+2) Ikkinchi echim ham juda oddiy. Pastki indeksdan foydalanib 2 sonini \`<sub>2</sub>\` orasiga yozib natijani olamiz:
+
+~~~html
+log<sub>2</sub>2 = 1
+~~~
+
+Xar birini yangi qatorlarga otqazish uchun alohida \`p\` teglari orasiga joylaymiz, va yakuniy natijaga ega bo'lmiz:
+
+~~~html
+<p>
+1) a<sup>2</sup> - b<sup>2</sup> = (a + b)(a - b)
+</p>
+
+<p>
+2) log<sub>2</sub>2 = 1
+</p>
+~~~
+          
+Agar ikkala mashqni xam uddalagan bo'lsangiz, Barakalla!`}
+        />
+        <Exersice
+          completed={false}
+          body={`Mana shu oddiy paragrafni, ikkala iqtibos teglarini qo'llab iqtiboz yarating:
+
+> Muvaffaqiyat - bu bir omadsizlikdan ikkinchisiga ishtiyoqni yo'qotmay harakatlanish.
+>
+> Uinston Cherchil`}
+          solution={`
+~~~html
+Necha dedim ul sanamg'a: <mark>Bormog'in!</mark>
+<br />
+<i>Qilmadi</i> ul tark oxir bormog'in;
+<br />
+<ins>Munchakim</ins> xudroyliq ko'rguzdi ul,
+<br />
+Aql hayrat qildi <del>tashlab</del> <ins>tashlab</ins> barmog'in.
+~~~
+
+`}
+        />
       </div>
     </div>
   );

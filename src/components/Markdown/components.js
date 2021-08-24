@@ -1,5 +1,6 @@
 import Code from "../Article/Code";
 import Info from "../Article/Info";
+import Blockquote from "../Article/Blockquote";
 
 export default {
   code: (value) => {
@@ -15,4 +16,5 @@ export default {
     return <code>{`${value.children[0]}`}</code>;
   },
   main: Info,
+  blockquote: Blockquote,
 };

@@ -60,17 +60,64 @@ html{
 }
 
 #article code {
-    @apply mx-1 text-[#FA7D6C] font-semibold bg-[#FFF6F6] px-1 rounded-md border-[1px] border-[#ffb8af];
-    font-family: 'JetBrains Mono', monospace;
-    color: #FA7D6C !important;
-    font-size: 0.95rem !important;
+    @apply mx-1 px-2 py-1 text-[#d400ff] font-semibold rounded-md bg-[#fae4ff85];
+    color: #d400ff !important;
+    word-wrap: normal !important;
+    font-size: 0.8rem !important;
+    font-weight: 500;
+}
+
+#article code::after, #article code::before {
+    content: ""
 }
 
 #article em {
     @apply text-[#017AFF] not-italic font-extrabold;
 }
 
-#article a {
-    @apply text-[#017AFF] not-italic font-extrabold border-b-2 border-dashed border-[#017AFF] hover:bg-blue-50 duration-200;
+#article a{
+    @apply text-[#017AFF] not-italic font-extrabold border-b-2 border-dashed border-[#017AFF] hover:bg-blue-50 duration-200;    
 }
 
+#article table {
+  @apply mb-7;
+  width: 100%;
+  table-layout: auto;
+  text-align: left;
+  font-size: 0.875em;
+  line-height: 1.7142857;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#article thead {
+  @apply bg-gray-50;
+  color: #111827;
+  font-weight: 600;
+  border-bottom-width: 1px;
+  border-bottom-color: #d1d5db;
+}
+#article thead th {
+  vertical-align: bottom;
+  padding-right: 0.5714286em;
+  padding-bottom: 0.5714286em;
+  padding-top: 0.5714286em;
+  padding-left: 0.5714286em;
+}
+#article tbody tr {
+  border-bottom-width: 1px;
+  border-bottom-color: #e5e7eb;
+}
+#article tbody tr:last-child {
+  border-bottom-width: 0;
+}
+#article tbody td {
+  vertical-align: top;
+  padding-top: 0.5714286em;
+  padding-right: 0.5714286em;
+  padding-bottom: 0.5714286em;
+  padding-left: 0.5714286em;
+}
+
+#article hr {
+    @apply my-12;
+}

@@ -4,37 +4,16 @@ import useToggle from "../../@hooks/useToggle";
 import { Collapse } from "react-collapse";
 
 function Exersice(props) {
-  const { completed } = props;
-  console.log(!completed);
   const [solutionActive, toggleSolution] = useToggle(false);
-  const [exerciseAcive, toggleExercise] = useToggle(!completed);
+  const [exerciseAcive, toggleExercise] = useToggle(!props.completed);
+  const [completed, toggleCompleted] = useToggle(props.completed);
 
-  const [exercise] =
-    useState(`Quyidagi xatboshiga "devilla.uz haqida" matni bilan "izoh" qo'shing. 
-:::main{#warn}
-Sichqoncha bilan ustiga oborganda xabarnoma chiqishi kerak.
-:::
-
-~~~html
-<p>
-    Devilla.uz bu dasturchilarni tayyorlash platfromasi!
-</p>
-~~~`);
-
-  const [solution] =
-    useState(`Sichqoncha bilan ustiga oborganda xabarnoma chiqishi kerak.
-~~~html
-<p title="devilla.uz haqida">
-    Devilla.uz bu dasturchilarni tayyorlash platfromasi!
-</p>
-~~~
-  
-`);
+  const [body] = useState(props.body);
+  const [solution] = useState(props.solution);
 
   return (
-    <div className="exercise mb-7">
-      {/* EXERCISE DROPDOWN */}
-      {/* EXERCISE DROPDOWN */}
+    <div className="body mb-7">
+      {/* =========== DROPDOWN */}
       <div
         className={`relative | flex items-center | py-2 px-4 | ${
           completed ? "bg-[#20E100]" : "bg-[#efefef]"
@@ -89,16 +68,22 @@ Sichqoncha bilan ustiga oborganda xabarnoma chiqishi kerak.
           </svg>
         </div>
       </div>
-      {/*  */}
+
       <Collapse isOpened={exerciseAcive}>
-        <div className="transform px-4 mt-7 overflow-hidden">
-          {/* MASHQ TSHUNUTIRILISHI */}
+        <div
+          className={`transform mx-2 pt-7 overflow-hidden border-l-2 border-r-2 border-b-2 pb-3 rounded-b-[15px] ${
+            completed && "border-[#20E100]"
+          }`}
+        >
+          {/* ============ EXERCISE */}
           <div className={`px-4`} id="article">
-            <Markdown src={exercise} />
+            <Markdown src={body} />
           </div>
 
-          {/* ECHIM */}
-          <div className={`result px-4 mt-16 rounded-[7px] bg-[#ffff0033]`}>
+          {/* ============ SOLUTION */}
+          <div
+            className={`result px-4 mx-2 mt-16 rounded-[7px] bg-[#ffff0033]`}
+          >
             <div
               className="dropdown | cursor-pointer | relative | flex items-center  py-2 rounded-[7px]"
               onClick={toggleSolution}
