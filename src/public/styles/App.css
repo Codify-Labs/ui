@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+html {
+  font-family: "Nunito", sans-serif;
+}
+
+#article {
+  font-family: "JetBrains Mono", monospace;
+}
+
+#article h1 {
+  @apply text-[2.25rem] font-extrabold pb-7;
+}
+
+#article h2 {
+  @apply text-3xl font-semibold pb-7;
+}
+
+#article h3 {
+  @apply text-2xl font-semibold pb-7;
+}
+
+#article h4 {
+  @apply text-xl font-semibold pb-7;
+}
+
+#article h5 {
+  @apply text-lg font-semibold pb-7;
+}
+
+#article img {
+  @apply rounded-[7px] w-full;
+}
+
+#article h6 {
+  @apply text-sm font-semibold pb-7;
+}
+#article ol {
+  @apply list-decimal pb-7 pl-6;
+}
+#article p,
+#article li {
+  @apply pb-7;
+  line-height: 1.9;
+  font-size: 0.9rem;
+  color: #0d1536d1;
+}
+
+#article ul {
+  @apply list-disc ml-4 pb-7;
+}
+
+#article li {
+  @apply pb-2 leading-7;
+}
+
+#article code {
+  @apply mx-1 px-2 py-1 text-[#d400ff] font-semibold rounded-md bg-[#fae4ff85];
+  color: #d400ff !important;
+  word-wrap: normal !important;
+  font-size: 0.8rem !important;
+  font-weight: 500;
+}
+
+#article code::after,
+#article code::before {
+  content: "";
+}
+
+#article em {
+  @apply text-[#017AFF] not-italic font-extrabold;
+}
+
+#article a {
+  @apply text-[#017AFF] not-italic font-extrabold border-b-2 border-dashed border-[#017AFF] hover:bg-blue-50 duration-200;
+}
+
+#article table {
+  @apply mb-7;
+  width: 100%;
+  table-layout: auto;
+  text-align: left;
+  font-size: 0.875em;
+  line-height: 1.7142857;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#article thead {
+  @apply bg-gray-50;
+  color: #111827;
+  font-weight: 600;
+  border-bottom-width: 1px;
+  border-bottom-color: #d1d5db;
+}
+#article thead th {
+  vertical-align: bottom;
+  padding-right: 0.5714286em;
+  padding-bottom: 0.5714286em;
+  padding-top: 0.5714286em;
+  padding-left: 0.5714286em;
+}
+#article tbody tr {
+  border-bottom-width: 1px;
+  border-bottom-color: #e5e7eb;
+}
+#article tbody tr:last-child {
+  border-bottom-width: 0;
+}
+#article tbody td {
+  vertical-align: top;
+  padding-top: 0.5714286em;
+  padding-right: 0.5714286em;
+  padding-bottom: 0.5714286em;
+  padding-left: 0.5714286em;
+}
+
+#article hr {
+  @apply my-12;
+}

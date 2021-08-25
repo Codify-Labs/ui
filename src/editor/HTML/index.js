@@ -1,9 +1,9 @@
 import React from "react";
 import { useEffect, useState } from "react";
 
-import useToggle from "../../@hooks/useToggle";
-import Safari from "../../components/Safari";
-import IDE from "../../components/IDE";
+import useToggle from "hooks/useToggle";
+import Safari from "components/IDE/Safari";
+import IDE from "components/IDE/IDE";
 
 export default function Index(props) {
   const [liveServer, toggleLiveServer] = useToggle(true);

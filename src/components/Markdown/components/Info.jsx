@@ -1,5 +1,4 @@
 export default function Info(props) {
-  console.log(props, "props");
   const icons = {
     success: (
       <svg

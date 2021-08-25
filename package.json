@@ -1,5 +1,5 @@
 {
-  "name": "sdsdsds",
+  "name": "codify",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,9 +7,6 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-    "ahooks": "^2.10.9",
-    "babel-plugin-prismjs": "^2.1.0",
-    "chai": "^4.3.4",
     "classnames": "^2.3.1",
     "console-feed": "^3.2.2",
     "hast-util-to-html": "^8.0.1",
@@ -25,7 +22,6 @@
     "react-inspector": "^5.1.1",
     "react-markdown": "^7.0.0",
     "react-scripts": "4.0.3",
-    "react-simple-tooltip": "^2.6.3",
     "react-tooltip": "^4.2.21",
     "refractor": "^4.1.1",
     "rehype-raw": "^6.0.0",

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Markdown from "../Markdown/Markdown";
-import useToggle from "../../@hooks/useToggle";
+import Markdown from "components/Markdown/Markdown";
+import useToggle from "hooks/useToggle";
 import { Collapse } from "react-collapse";
 
 function Exersice(props) {

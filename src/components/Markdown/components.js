@@ -1,6 +1,6 @@
-import Code from "../Article/Code";
-import Info from "../Article/Info";
-import Blockquote from "../Article/Blockquote";
+import Blockquote from "./components/Blockquote";
+import Code from "./components/Code";
+import Info from "./components/Info";
 
 export default {
   code: (value) => {

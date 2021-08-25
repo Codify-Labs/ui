@@ -1,12 +1,13 @@
 import { lazy, memo, Suspense, useState } from "react";
-import Loading from "./Loading";
+import Loading from "components/IDE/Loading";
+import "public/styles/editor.css";
 
 function Environment(props) {
   const [src] = useState(props.src);
   const [env] = useState(props.env);
 
   const Template = {
-    IDE: lazy(() => import(`../editor/${env}`)),
+    IDE: lazy(() => import(`editor/${env}`)),
   };
 
   return (

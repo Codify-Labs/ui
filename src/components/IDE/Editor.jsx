@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { ReactCodeJar } from "react-codejar";
 import { refractor } from "refractor";
 import cn from "classnames";
 import { toHtml } from "hast-util-to-html";
 
-import Toggle from "../components/Toggle";
-import Tooltip from "./Tooltip";
+import Toggle from "./Toggle";
+import Tooltip from "../Tooltip/Tooltip";
 
 export default function Editor(props) {
   const {
@@ -33,6 +33,9 @@ export default function Editor(props) {
               const root = refractor.highlight(editor.textContent, language);
 
               editor.innerHTML = toHtml(root);
+            }}
+            style={{
+              paddingRight: "1.5rem",
             }}
             lineNumbers={lineNumbers || false}
           />

@@ -1,128 +1,85 @@
+import Exersice from "#/#lesson/components/Article/Exersice";
 import { memo, useState } from "react";
-import Markdown from "./Markdown/Markdown";
-import Exersice from "./Article/Exersice";
+import Markdown from "components/Markdown/Markdown";
 
 function Article(props) {
   const [markdown] =
-    useState(`Havola bu foydalanuvchilarga bir sayttan ikkinchi saytga o'tishni ta'minlaydi.
+    useState(`Sayt yaratganda 10000+ qator HTML kod yozishga tog'ri keladi.
 
-Sichqonchani havola ustida obirganda, sichqoncha kichik qo'lga aylanadi 👆.
-
-Misol tariqasida [google.com](#) sayti:
-
-![LINK](https://i.ibb.co/NCwB26G/LINK.gif)
-
-### Havola sintaksisi
-
-Havolalar \`<a>\` HTML elementi (tegi) yordamida yaratiladi. Orasiga beriladikan matin, bosish mumkun bo'lgan havolaga aylanadi, va \`href\` attributi yordamida saytga havola qoldirasiz:
-
-:::main{#info}
-Havola \`inline\` (Cheklangan) element
-:::
-
-~~~html
-Mana shu <a href="https://kun.uz">havola:</a>
-~~~
-
-Qiziqarli tomoni \`a\` tegi kontentiga nima joylasangiz o'sha havolaga aylanadi.
-
-Misol rasm joylaymiz:
-
-~~~html
-Rasm bilan havola
-<a href="https://kun.uz">
-    <img 
-        src="https://i.ibb.co/Yj4M1f2/1200px-Facebook-Logo-2019.webp" 
-        width="100" 
-        height="100" 
-    />
-</a>
-~~~
-
-:::main{#success}
-Rasmgning o'chamlarini \`width\` va \`height\` orqali o'zgartsa bo'ladi.
-:::
-
-Havolaning umumiy tuzilishi:
-
-![LINK_TAG](https://i.ibb.co/QKb36dt/Group-12-1.png)
-
-### Havola ko'rinishi
-
-Shuningdek, havolalar barcha brauzerlarda quyidagicha ko'rinish oladi:
-
-- Xali ustiga bosilmagan havola chizilgan va ko'k rangda
-- Bosilgan havola chizilgan va binafsha rangda
-- Faol havola (Ustiga bosip turulganda) chizilgan va qizil rangda
-
-:::main{#info}
-Albatta *CSS* yordamida buni o'zgartirsa bo'ladi.
-:::
-
-### *Target* Attributi
-
-\`a\` tegini bosganingizda shu saytning ustidan yangi saytga o'tiladi.
-
-\`Target\` attributi havolani qayerdan ochilishini belgilaydi.
-
-Uning qiymatiga 4ta qiymat turini berish mumkun, ular quyidagilar:
-
-#### 1. \`_self\`
-
-Hujjat bosilgan oynadan ochadi. Yozish shart emas! (*default* qiymat)
-
-#### 2. \`_blank\`
-
-Saytni yangi *tabdan* (oynadan) ochadi.
-
-#### 3. \`_parent\`
-
-Saytni yuqori freymda ochadi
-
-#### 4. \`_top\`
-
-Saytni oynaning to'liq qismida ochadi
-
-Eng ko'p qo'llaniladigani bu \`_blank\` qiymati:
-
-~~~html
-<a target="_blank" href="https://google.com">Google.com</a>
-~~~
-
-### Absolut URL vs Relative URL
-
-Tepadagi barcha misollarda *src* attributi qiymatiga *absolut* sayt manzili kiritildi.
-
-:::main{#success}
-Sayt manzilini *URL* deb nomlash tog'riroq bo'ladi
-:::
-
-![IMAGE_URL](https://i.ibb.co/tsB9k5J/Group-14.png)
-
-\`https://devilla.uz/about\`ning Relative va Absolut URL lari:
-
-1. Relative URL sayt manzilining (URL) ning *directory* (*/about*) qismi.
-2. Absolut URL bu sayt manzilining (URL) to'liq nomi: \`https://devilla.uz/about\`.
-
-Agarda sizning saytingiz [devilla.uz](#) *domenida* bo'lsa va shu saytning o'ziga \`https://devilla.uz/about\` havolasi bilan yo'naltirmoqchi bo'lsangiz *directory* qismini yozish kifoya:
-
-~~~html
-<a href="/about">devilla.uz<a>
-~~~
-
-Mana shu ham bir hil natijani beradi:
-
-~~~html
-<a href="https://devilla.uz/about">devilla.uz<a>
-~~~
-
-Lekin siz [devilaa.uz](#)dan turib [google.com](#) saytiga yo'naltirmoqchi bo'lsangiz, Absolut URL ishlatishingiz shartli bo'ladi:
-
-~~~html
-<a href="https://google.com">google.com<a>
-~~~
-`);
-
+  Yaxshi sayt o'zida kamida 3 qismdan iborat bo'ladi:
+  
+  *Header*, *Body*, *Footer* qismlari (ingl: Bosh, Ta'na va Osti qismlar).
+  
+  Header qismda *Menu* yoki *Logo* bo'lishi mumkun, *Body* qismida asosiy ma'lumotlar va *Footer* qismida yakunlash, telefon raqamlar va sayt egasi haqida ma'lumotlar berilishi mumkun.
+  
+  Asosiy qismlar yana parchalarga ajratiladi, Header 2 qismga ajraldi: Menu va Logo, balkim yana qismlar qo'shilar! Body ham bir nechta qismlardan iborat bo'lishi mumkun, Footer 3 qismga ajraldi: Yakunlash so'zi, Bog'lanish qismi, kompaniya xaqida ozgina ma'lumot.
+  
+  Qisqasi sayt tuzulmasi deyarli barchasi shu ko'rinishga keladi:
+  
+  ![WEBSITE_LAYOUT](https://i.ibb.co/dtM3MXQ/Group-17.png)
+  
+  HTML teglar bilan:
+  
+  ~~~html
+  <header>
+  <logo></logo>
+  <menu></menu>
+  </header>
+  
+  <body>
+  <h1>Biz dunyodagi #1 raqamli kompaniya</h1>
+  </body>
+  
+  <footer>
+  <p>Sayt haqida</p>
+  <p>Ishlash vaqti: 7:00 - 18:00</p>
+  <p>Kompaniya haqida...</p>
+  </footer>
+  ~~~
+  
+  Aynan shuni daraxtga o'xshab shohalashni HTML da *Parent - Child Relation* deyiladi, o'bekcha Ota-Ona va Farzandlar bog'liqligi.
+  
+  Bosh qismida Ota-Ona bu:
+  
+  \`<header></header>\`
+  
+  Farzandlari:
+  
+  1. \`<logo></logo>\`
+  2. \`<menu></menu>\`
+  
+  :::main{#success}
+  Bitta teg o'z ichiga olgan boshqa teglar, *farzandlari* deyiladi, o'zi esa *OTA-ONA*
+  :::
+  
+  \`<logo>\` va \`<menu>\` teglari bir birlari bilan teng qatorda joylashganlar *siblings*, ya'ni *aka-ukalar* xisoblanadi.
+  
+  ~~~html
+  <ota-ona>
+  <farzand-1></farzand-1>
+  <farzand-2></farzand-2>
+  </ota-ona>
+  ~~~
+  
+  \`<farzand-1>\` va \`</farzand-2>\` AKA-UKALAR (*siblings*).
+  
+  :::main{#warn}
+  Tepadagi teglar HTML da *mavjud* emas, shunchaki namoyish uchun.
+  :::
+  
+  Kodni tushunarli bo'lishi uchun \`farzand\` bo'lgan teglarni chap tarafidan 4 oraliq masofa tashash bilan yozish o'rinli bo'ladi:
+  
+  ~~~html
+  <ota-ona>
+      <farzand-1></farzand-1>
+      <farzand-2></farzand-2>
+  </ota-ona>
+  ~~~
+  
+  :::main{#info}
+  Klaviaturada *Tab* tugmasini bosish kifoya.
+  :::
+  `);
   return (
     <div className="h-full overflow-auto px-2" style={{ width: props.width }}>
       <article className="px-3" id="article">

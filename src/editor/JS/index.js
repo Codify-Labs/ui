@@ -1,10 +1,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
 
-import File from "../../components/File";
-import useToggle from "../../@hooks/useToggle";
-import Editor from "../../components/Editor";
-import Safari from "../../components/Safari";
+import File from "../../components/IDE/File";
+import useToggle from "../../hooks/useToggle";
+import Editor from "../../components/IDE/Editor";
+import Safari from "../../components/IDE/Safari";
 
 export default function Index() {
   const [activeTab, setActiveTab] = useState(1);
