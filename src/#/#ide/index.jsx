@@ -1,12 +1,14 @@
 import { useRef } from "react";
 import useWindowSize from "hooks/useWindowSize";
 
-import { Article, Header, IDE } from "./components";
+import { Header, IDE } from "#/#lesson/components";
+import { useParams } from "react-router";
 
-export default function Lesson() {
+export default function CodingEnvironment() {
   const [height] = useWindowSize();
   const header = useRef();
-
+const params = useParams();
+console.log(params.lang);
   return (
     <div className="h-full max-w-screen-2xl mx-auto">
       <Header refs={header} />
@@ -16,9 +18,8 @@ export default function Lesson() {
           height: `${height - header?.current?.offsetHeight}px`,
         }}
       >
-        <Article width={`33.3333%`} />
 
-        <IDE env={`HTML`} width={`66.6667%`} />
+        <IDE env={params?.lang.toUpperCase()} width={`100%`} />
       </section>
     </div>
   );

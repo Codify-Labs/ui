@@ -6,7 +6,7 @@ import useToggle from "../../hooks/useToggle";
 import Editor from "../../components/IDE/Editor";
 import Safari from "../../components/IDE/Safari";
 
-export default function Index() {
+export default function Index(props) {
   const [activeTab, setActiveTab] = useState(1);
   const [liveServer, toggleLiveServer] = useToggle();
 
@@ -24,7 +24,8 @@ export default function Index() {
   }, [liveServer, jsCode]);
 
   return (
-    <section className="w-2/3 flex">
+    <section className="flex"
+    style={{ width: props.width }}>
       <div className="w-1/2 h-full py-2  flex flex-col items-stretch relative bg-white z-40">
         <div>
           <div className="flex flex-nowrap overflow-x-auto py-2 px-2">

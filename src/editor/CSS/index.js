@@ -5,7 +5,7 @@ import useToggle from "../../hooks/useToggle";
 import Safari from "../../components/IDE/Safari";
 import IDE from "../../components/IDE/IDE";
 
-export default function Index() {
+export default function Index(props) {
   const [liveServer, toggleLiveServer] = useToggle();
 
   const [htmlCode, setHtmlCode] = useState(``);
@@ -41,7 +41,7 @@ export default function Index() {
   }, [liveServer, htmlCode, cssCode]);
 
   return (
-    <section className="w-2/3 flex">
+    <section className="flex" style={{ width: props.width }}>
       <IDE
         editor={editor}
         liveServer={liveServer}
