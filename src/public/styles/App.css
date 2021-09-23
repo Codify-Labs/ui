@@ -5,8 +5,41 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+.fc {
+  @apply flex items-center;
+}
+
+.fcb {
+  @apply flex items-center justify-between;
+}
+
+.fcc {
+  @apply flex items-center justify-center;
+}
+
+.container {
+  @apply mx-auto lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm !important;
+}
+
+.bg-gradient-blue {
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  caret-color: #637bff;
+  color: #000;
+  padding-right: 5px;
+  background: linear-gradient(90deg, #017AFF -3.88%, #21C8F6 88.09%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
 html {
+  scroll-behavior: smooth;
   font-family: "Nunito", sans-serif;
+  @apply select-none;
+}
+
+.click\:scale {
+  @apply active:scale-95 cursor-pointer duration-200;
 }
 
 #article {
@@ -40,9 +73,11 @@ html {
 #article h6 {
   @apply text-sm font-semibold pb-7;
 }
+
 #article ol {
   @apply list-decimal pb-7 pl-6;
 }
+
 #article p,
 #article li {
   @apply pb-7;
@@ -90,6 +125,7 @@ html {
   border-radius: 5px;
   overflow: hidden;
 }
+
 #article thead {
   @apply bg-gray-50;
   color: #111827;
@@ -97,6 +133,7 @@ html {
   border-bottom-width: 1px;
   border-bottom-color: #d1d5db;
 }
+
 #article thead th {
   vertical-align: bottom;
   padding-right: 0.5714286em;
@@ -104,13 +141,16 @@ html {
   padding-top: 0.5714286em;
   padding-left: 0.5714286em;
 }
+
 #article tbody tr {
   border-bottom-width: 1px;
   border-bottom-color: #e5e7eb;
 }
+
 #article tbody tr:last-child {
   border-bottom-width: 0;
 }
+
 #article tbody td {
   vertical-align: top;
   padding-top: 0.5714286em;

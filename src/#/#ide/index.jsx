@@ -7,8 +7,10 @@ import { useParams } from "react-router";
 export default function CodingEnvironment() {
   const [height] = useWindowSize();
   const header = useRef();
-const params = useParams();
-console.log(params.lang);
+  const params = useParams();
+  console.log(params.lang);
+
+  
   return (
     <div className="h-full max-w-screen-2xl mx-auto">
       <Header refs={header} />
@@ -19,7 +21,7 @@ console.log(params.lang);
         }}
       >
 
-        <IDE env={params?.lang.toUpperCase()} width={`100%`} />
+        <IDE env={params?.lang?.toUpperCase()} width={`100%`} />
       </section>
     </div>
   );
