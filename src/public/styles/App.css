@@ -18,7 +18,7 @@
 }
 
 .container {
-  @apply mx-auto lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm !important;
+  @apply mx-auto xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm !important;
 }
 
 .bg-gradient-blue {
@@ -36,10 +36,6 @@ html {
   scroll-behavior: smooth;
   font-family: "Nunito", sans-serif;
   @apply select-none;
-}
-
-.click\:scale {
-  @apply active:scale-95 cursor-pointer duration-200;
 }
 
 #article {
