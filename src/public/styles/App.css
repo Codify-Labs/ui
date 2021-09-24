@@ -32,6 +32,10 @@
   background-clip: text;
 }
 
+.blue-gradient {
+  background: linear-gradient(90deg, #017AFF -3.88%, #21C8F6 88.09%);
+}
+
 html {
   scroll-behavior: smooth;
   font-family: "Nunito", sans-serif;

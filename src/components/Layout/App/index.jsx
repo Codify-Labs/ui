@@ -9,11 +9,11 @@ function Container(props) {
 }
 
 function Header(props) {
-  return <header>{props.children}</header>;
+  return <header {...props} />;
 }
 
 function Footer(props) {
-  return <footer>{props.children}</footer>;
+  return <footer {...props} className={`${props.className}`}/>;
 }
 
 function Absolute(props) {
