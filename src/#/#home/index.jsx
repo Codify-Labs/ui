@@ -6,7 +6,7 @@ import Progress from "./cmp/Progress";
 function Home(props) {
     return (
         <App>
-            <App.Header>
+            <App.Container>
                 <div className="container | fcb | py-3">
                     <Logo />
 
@@ -31,7 +31,7 @@ function Home(props) {
                         SB
                     </div>
                 </div>
-            </App.Header>
+            </App.Container>
 
             <App.Container>
                 <section className="flex-col fc py-12 | relative">

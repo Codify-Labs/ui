@@ -81,11 +81,11 @@ function Article(props) {
   :::
   `);
   return (
-    <div className="h-full overflow-auto px-2" style={{ width: props.width }}>
-      <article className="px-3" id="article">
+    <div className="h-full overflow-auto" style={{ width: props.width }}>
+      <article className="pr-3" id="article">
         <h1 className="py-7">HTML - Ota-Ona va Bola</h1>
 
-        <Markdown src={markdown} />
+        <Markdown src={markdown} /> 
       </article>
 
       <div className="exercsices pb-10">

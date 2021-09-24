@@ -3,7 +3,7 @@
 }
 .click\:scale:active {
   transition: all 100ms ease-in;
-  transform: scale(0.95);
+  transform: scale(0.925);
 }
 
 ::-webkit-scrollbar-track {
