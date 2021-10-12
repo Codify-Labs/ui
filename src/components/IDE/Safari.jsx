@@ -130,9 +130,20 @@ export default function Safari(props) {
       </div>
       <div className="z-20">
         <div
-          className="sticky | bg-gray-100 hover:bg-gray-200 duration-300 font-bold | w-full px-4 py-2 top-0 right-0  z-10 | flex items-center cursor-pointer"
+          className="sticky | bg-gray-100 hover:bg-gray-200 duration-300 | w-full px-4 py-2 top-0 right-0  z-10 | flex items-center cursor-pointer text-blue-900"
           onClick={() => setConsoleActive(!consoleActive)}
         >
+          <div className="console:icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" className="h-5 mr-2">
+              <g data-name="Layer 2">
+                <g>
+                  <path
+                    d="M20 25a1 1 0 00-.41-.79l-8-6A1 1 0 0011 18a1 1 0 00-1 1 1 1 0 00.41.79L17.33 25l-6.93 5.2a1 1 0 00-.4.8 1 1 0 001 1 1 1 0 00.59-.21l8-6A1 1 0 0020 25zM40 0H4a4 4 0 00-4 4v36a4 4 0 004 4h36a4 4 0 004-4V4a4 4 0 00-4-4zm2 40a2 2 0 01-2 2H4a2 2 0 01-2-2V4a2 2 0 012-2h36a2 2 0 012 2zm-15-8h-6a1 1 0 000 2h6a1 1 0 000-2z"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+          </div>
           Console
           <svg
             className={cn({
@@ -193,12 +204,11 @@ export default function Safari(props) {
               {result.length > 0 &&
                 result.map((res, index) => (
                   <div
-                    className={`flex py-2 px-2 border-b-2 border-gray-300 ${
-                      typeof res.message[0] === "object" ||
-                      typeof res.message[0] === "array"
+                    className={`flex py-2 px-2 border-b-2 border-gray-300 ${typeof res.message[0] === "object" ||
+                        typeof res.message[0] === "array"
                         ? "items-center"
                         : "items-center"
-                    }`}
+                      }`}
                   >
                     {res.message.map((r) => (
                       <div className="mr-5">
