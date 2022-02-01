@@ -48,13 +48,14 @@ pre[class*="language-"] {
 @media only screen and (min-width: 600px) {
   pre[class*="language-"],
   code[class*="language-"] {
-    font-size: 0.9rem;
+    font-size: 0.875rem;
   }
 
   #article code[class*="language-"],
   #article pre[class*="language-"] {
-    font-size: 0.9rem;
+    font-size: 0.875rem;
   }
+  
   pre[class*="language-"] {
     padding: 1.5em;
   }

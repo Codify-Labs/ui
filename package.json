@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@codesandbox/sandpack-react": "^0.13.8",
     "@craco/craco": "^6.2.0",
+    "@datacamp/waffles-markdown": "^4.0.10",
     "@headlessui/react": "^1.4.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",

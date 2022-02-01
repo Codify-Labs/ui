@@ -37,7 +37,6 @@ export default function Editor(props) {
             style={{
               paddingRight: "1.5rem",
             }}
-            lineNumbers={lineNumbers || false}
           />
         </pre>
       </div>

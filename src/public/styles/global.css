@@ -1,69 +1,34 @@
 .click\:scale {
   cursor: pointer;
 }
+
 .click\:scale:active {
   transition: all 100ms ease-in;
   transform: scale(0.925);
 }
 
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
-  background-color: #ffffff;
-  border-radius: 10px;
+::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
 }
 
-::-webkit-scrollbar {
-  width: 7px;
-  height: 7px;
-  background-color: #f5f5f5;
+::-webkit-scrollbar-track {
+  background: hsla(0, 0%, 100%, 0)
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: hsla(0, 0%, 82%, 1);
+  background: hsla(0, 0%, 100%, .15);
+  border-radius: 9999px
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsla(0, 0%, 100%, .3)
 }
 
 html,
 body,
 #root {
   height: 100vh;
-}
-
-#article > pre {
-  height: auto !important;
-}
-
-#warn {
-  background-color: rgba(255, 255, 0, 0.2);
-}
-#warn * {
-  color: #bd8800 !important;
-}
-#info {
-  background-color: #e8efff;
-}
-#info * {
-  color: #1758ff !important;
-}
-
-#error {
-  background-color: #fff1f1;
-}
-
-#error * {
-  color: #fe0000 !important;
-}
-
-#success {
-  background-color: #f3fff3;
-}
-
-#success * {
-  color: #03a700 !important;
-}
-
-.last-child > :last-child {
-  padding-bottom: 0rem !important;
 }
 
 .check::after {
@@ -74,6 +39,15 @@ body,
   z-index: 10;
   width: 2px;
 }
+
 .ReactCollapse--collapse {
   transition: height 500ms;
+}
+
+.cm-scroller {
+  @apply outline-none focus:outline-none;
+}
+
+.cm-gutterElement {
+  @apply text-white opacity-80;
 }

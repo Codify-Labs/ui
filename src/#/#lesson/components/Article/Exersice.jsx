@@ -12,140 +12,97 @@ function Exersice(props) {
   const [solution] = useState(props.solution);
 
   return (
-    <div className="body mb-7">
-      {/* =========== DROPDOWN */}
-      <div
-        className={`relative | flex items-center | py-2 px-4 | ${
-          completed ? "bg-[#20E100]" : "bg-[#efefef]"
-        } rounded-[7px]`}
-      >
-        <div
-          className={`completed | w-7 h-7 | p-1.5 rounded-[7px] | cursor-pointer ${
-            completed ? "bg-white" : "bg-gray-300"
-          }`}
-        >
-          <svg
-            className={`w-full h-full ${!completed && "hidden"}`}
-            viewBox="0 0 11 8"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1 3.99958L4.00084 6.99916L10 1"
-              stroke="#73CE49"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </div>
-        <h1
-          className={`pl-10 | text-[15px] ${
-            completed ? "text-white" : "text-[#151541]"
-          } font-extrabold`}
-        >
-          Jadval yaratish
-        </h1>
-        <div
-          className={`absolute right-1 rounded-[7px] duration-500 w-10 h-10 | flex items-center justify-center |  cursor-pointer ${
-            !exerciseAcive ? "rotate-0" : "rotate-90"
-          }`}
-          onClick={toggleExercise}
-        >
-          <svg
-            className="w-2"
-            viewBox="0 0 10 18"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1 0.999999L9 9L1 17"
-              stroke={`${completed ? "white" : "#151541"}`}
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
-      </div>
-
-      <Collapse isOpened={exerciseAcive}>
-        <div
-          className={`transform mx-2 pt-7 overflow-hidden border-l-2 border-r-2 border-b-2 pb-3 rounded-b-[15px] ${
-            completed && "border-[#20E100]"
-          }`}
-        >
-          {/* ============ EXERCISE */}
-          <div className={`px-4`} id="article">
-            <Markdown src={body} />
-          </div>
-
-          {/* ============ SOLUTION */}
-          <div
-            className={`result px-4 mx-2 mt-16 rounded-[7px] bg-[#ffff0033]`}
-          >
-            <div
-              className="dropdown | cursor-pointer | relative | flex items-center  py-2 rounded-[7px]"
-              onClick={toggleSolution}
-            >
-              <div className="completed">
-                <svg
-                  className="w-6"
-                  viewBox="0 0 22 27"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M13.14 25.05H8.63a1.46 1.46 0 01-1.46-1.52v-3.04a.38.38 0 01.75 0v3.04a.7.7 0 00.7.76h4.52a.93.93 0 00.94-.76v-3.04a.38.38 0 01.75 0v3.04a1.66 1.66 0 01-1.69 1.52z"
-                    fill="#D6B300"
-                  />
-                  <path
-                    d="M14.14 20.87H7.87a.76.76 0 01-.75-.63 8.27 8.27 0 00-2.07-3.95 7.9 7.9 0 1111.9 0 8.27 8.27 0 00-2.07 3.95.76.76 0 01-.74.63zM11 3.93A7.15 7.15 0 005.62 15.8a9 9 0 012.25 4.32h6.26a9.02 9.02 0 012.26-4.32 7.15 7.15 0 00-5.4-11.86zM11 26.42a1.72 1.72 0 01-1.72-1.71.4.4 0 01.38-.41h2.68a.38.38 0 01.38.37A1.73 1.73 0 0111 26.42zm-.9-1.37a.96.96 0 001.8 0h-1.8zM7.03 22.53a.38.38 0 01-.04-.75l7.89-.81a.38.38 0 11.07.75l-7.89.8-.03.01zM7.08 24.08a.38.38 0 11-.03-.75l7.83-.8a.38.38 0 01.4.48.38.38 0 01-.33.26l-7.83.8-.04.01zM10.97 2.3a.38.38 0 01-.38-.38V.38a.38.38 0 01.76 0v1.54a.38.38 0 01-.38.38zM6.44 3.53a.38.38 0 01-.33-.19l-.77-1.33a.38.38 0 01.65-.38l.77 1.34a.38.38 0 01-.32.56zM3.13 6.87a.37.37 0 01-.2-.05L1.6 6.04a.38.38 0 11.38-.65l1.33.77a.38.38 0 01-.18.7zM1.92 11.4H.38a.38.38 0 110-.75h1.54a.38.38 0 010 .76zM1.82 16.71a.38.38 0 01-.2-.7l1.35-.77a.38.38 0 11.37.65l-1.33.77a.38.38 0 01-.2.05zM15.56 3.53a.38.38 0 01-.32-.56L16 1.63a.38.38 0 01.65.38l-.77 1.33a.38.38 0 01-.33.2zM18.88 6.87a.38.38 0 01-.2-.7l1.35-.78a.38.38 0 11.38.65l-1.34.78a.37.37 0 01-.2.05zM21.62 11.4h-1.54a.38.38 0 110-.75h1.54a.38.38 0 010 .76zM20.18 16.71a.38.38 0 01-.18-.05l-1.34-.77a.38.38 0 11.37-.65l1.34.77a.38.38 0 01-.19.7z"
-                    fill="#D6B300"
-                  />
-                  <path
-                    d="M9.37 20.87a.38.38 0 01-.36-.3l-1.83-7.85a.38.38 0 01.5-.43l1.7.63 1.43-.86a.38.38 0 01.39 0l1.42.86 1.7-.63a.38.38 0 01.5.43L13 20.58a.38.38 0 11-.73-.18l1.67-7.16-1.22.45a.38.38 0 01-.33-.03L11 12.83l-1.38.83a.38.38 0 01-.33.03l-1.22-.45 1.67 7.16a.38.38 0 01-.37.47z"
-                    fill="#D6B300"
-                  />
-                </svg>
-              </div>
-              <h1 className="pl-10 | text-[15px] text-[#D6B300] font-extrabold">
-                Echim
-              </h1>
-
+    <div
+      className={`relative | transform overflow-hidden ${
+        completed && "border-l-[0.5em] border-[#20E100]"
+      }`}
+    >
+      {completed && <div className="absolute inset-0 | bg-[#E1E1E173]"></div>}
+      {/* ============ EXERCISE */}
+      <div className="border-b border-gray-300">
+        <div id="article">
+          <div className="flex space-x-5 px-4 py-5">
+            <div className="flex space-x-5">
               <div
-                className={`absolute right-2 duration-500 ${
-                  solutionActive && "rotate-90"
+                className={`completed | w-6 h-6 | rounded-[3px] fcc | cursor-pointer ${
+                  completed ? "bg-[#20E100]" : "bg-gray-300"
                 }`}
               >
                 <svg
-                  className="w-2"
-                  viewBox="0 0 10 18"
+                  className={`w-full ${!completed && "hidden"}`}
+                  viewBox="0 0 20 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M1 0.999999L9 9L1 17"
-                    stroke="#D6B300"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M15.6227 5.13595C16.0079 5.38781 16.116 5.90427 15.8642 6.28947L10.1975 14.9562C10.0639 15.1604 9.84758 15.2958 9.60552 15.3267C9.36346 15.3576 9.12002 15.2808 8.93944 15.1167L5.27278 11.7834C4.93223 11.4738 4.90714 10.9467 5.21672 10.6062C5.52631 10.2657 6.05335 10.2405 6.3939 10.5501L9.33739 13.226C11.3415 10.1609 12.4651 8.44248 14.4692 5.37739C14.7211 4.99219 15.2375 4.88409 15.6227 5.13595Z"
+                    fill="white"
                   />
                 </svg>
               </div>
+
+              <h3
+                style={{
+                  fontSize: "1rem",
+                  color: "#05192D !important",
+                }}
+              >
+                2.
+              </h3>
             </div>
 
-            <Collapse isOpened={solutionActive}>
-              <div
-                className={`rounded-[7px] | duration-500 | relative pt-3`}
-                id="article"
-              >
-                <Markdown src={solution} />
-              </div>
-            </Collapse>
+            <div className="last-child">
+              <Markdown src={body} />
+            </div>
           </div>
         </div>
-      </Collapse>
+        {/* ============ SOLUTION */}
+        <div className={`result my-5 mx-3 bg-[#FFFFA6]`}>
+          <div
+            className="dropdown px-4 | cursor-pointer | relative | flex items-center  py-2 rounded-[7px]"
+            onClick={toggleSolution}
+          >
+            <h1 className="text-[15px] text-[#B19500]">
+              {solutionActive ? (
+                "Echim:"
+              ) : (
+                <h1>Qiynalyapsizmi? Echimni ko’rish:</h1>
+              )}
+            </h1>
+
+            <div
+              className={`absolute right-2 duration-500 ${
+                solutionActive && "rotate-90"
+              }`}
+            >
+              <svg
+                className="w-4"
+                viewBox="0 0 15 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.25 2.75C8.25 2.33579 7.91421 2 7.5 2C7.08579 2 6.75 2.33579 6.75 2.75V6.75H2.75C2.33579 6.75 2 7.08579 2 7.5C2 7.91421 2.33579 8.25 2.75 8.25H6.75V12.25C6.75 12.6642 7.08579 13 7.5 13C7.91421 13 8.25 12.6642 8.25 12.25V8.25H12.25C12.6642 8.25 13 7.91421 13 7.5C13 7.08579 12.6642 6.75 12.25 6.75H8.25V2.75Z"
+                  fill="#B19500"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <Collapse isOpened={solutionActive}>
+            <div
+              className={`rounded-[7px] | px-4 duration-500 | relative pt-3 bg-[#FFFFCC]`}
+              id="article"
+            >
+              <Markdown src={solution} />
+            </div>
+          </Collapse>
+        </div>
+      </div>
     </div>
   );
 }

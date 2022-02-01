@@ -1,6 +1,6 @@
 import { lazy, memo, Suspense, useState } from "react";
 import Loading from "components/IDE/Loading";
-import "public/styles/editor.css";
+import "public/styles/editor-dark.css";
 
 function Environment(props) {
   const [src] = useState(props.src);

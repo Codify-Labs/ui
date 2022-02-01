@@ -8,9 +8,7 @@ export default function CodingEnvironment() {
   const [height] = useWindowSize();
   const header = useRef();
   const params = useParams();
-  console.log(params.lang);
 
-  
   return (
     <div className="h-full max-w-screen-2xl mx-auto">
       <Header refs={header} />
@@ -20,7 +18,6 @@ export default function CodingEnvironment() {
           height: `${height - header?.current?.offsetHeight}px`,
         }}
       >
-
         <IDE env={params?.lang?.toUpperCase()} width={`100%`} />
       </section>
     </div>

@@ -12,6 +12,7 @@ function Markdown(props) {
       rehypePlugins={[rehypeRaw]}
       remarkPlugins={[directive, directiveCustom, gfmRemark]}
       components={components}
+      className="scroll-white"
     />
   );
 

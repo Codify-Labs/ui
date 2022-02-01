@@ -8,12 +8,21 @@ function Container(props) {
   );
 }
 
+function Body(props) {
+  return <main {...props} className={`${props.className}`} />;
+}
+
 function Header(props) {
-  return <header {...props} />;
+  return (
+    <header
+      {...props}
+      className={`w-full sticky top-0 z-50 ${props.className}`}
+    />
+  );
 }
 
 function Footer(props) {
-  return <footer {...props} className={`${props.className}`}/>;
+  return <footer {...props} className={`${props.className}`} />;
 }
 
 function Absolute(props) {
@@ -26,3 +35,4 @@ App.Container = Container;
 App.Header = Header;
 App.Footer = Footer;
 App.Absolute = Absolute;
+App.Body = Body;
