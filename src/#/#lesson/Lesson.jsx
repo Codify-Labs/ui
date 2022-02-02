@@ -9,8 +9,6 @@ import Progress from "#/#home/cmp/Progress";
 import { Disclosure, Transition } from "@headlessui/react";
 import { Popover } from "@headlessui/react";
 import HamburgerMenu from "react-hamburger-menu";
-import { Sandpack, sandpackDark } from "@codesandbox/sandpack-react";
-import "@codesandbox/sandpack-react/dist/index.css";
 
 export default function Lesson() {
   const [height] = useWindowSize();
@@ -268,13 +266,22 @@ export default function Lesson() {
         <section
           className="w-full | flex"
           style={{
-            height: `${height - header?.current?.offsetHeight + 1}px`,
+            height: `${height - header?.current?.offsetHeight + 0.5}px`,
           }}
         >
           <Article width={`33.3333%`} />
           {/* <IDE env={`HTML`} width={`66.6667%`} /> */}
-          <div className="w-2/3 h-full flex flex-col items-stretch relative bg-gray-primary">
-            <IDE />
+          <div className="w-[66.6666%] flex relative bg-gray-primary">
+            <div className="w-1/2">
+              <IDE
+                height={height}
+                onTestRun={(code) => console.log(code)}
+                onRestore={() => console.log(`Restore`)}
+              />
+            </div>
+            <div className="w-1/2 bg-white">
+              <iframe src="" frameborder="0"></iframe>
+            </div>
           </div>
         </section>
       </App.Body>

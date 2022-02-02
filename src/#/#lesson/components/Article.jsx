@@ -21,7 +21,7 @@ Shu turdagi tartiblangan roʻyxatlar \`<ol>\` Ota-Ona elementi bilan boshlanib, 
         <Markdown src={markdown} />
       </article>
 
-      <div className="exercsices pb-10">
+      <div className="exercsices pb-20">
         <div className="title | flex items-end | px-4 | bg-[#EEEEEE] w-full h-14 fc space-x-5">
           <svg
             className="h-7 w-7"

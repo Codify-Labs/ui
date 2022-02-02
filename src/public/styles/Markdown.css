@@ -162,6 +162,3 @@
     color: #03a700 !important;
 }
 
-.last-child> :last-child {
-    padding-bottom: 0rem !important;
-}
