@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#8134ff">
+  <meta name="theme-color" content="#ffffff">
+
+
+  <meta name="robots" content="noodp" />
+
+
+
+
+  <title>A 2-minute React app – Frontend Armory</title>
+
+  <meta name="description"
+    content="Use <script> tags and plain HTML to create a React app in two minutes - without touching Webpack or NPM!" />
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed for Frontend Armory"
+    href="https://frontarm.com/rss.xml" />
+  <link rel="canonical" href="https://frontarm.com/courses/react-fundamentals/basics/one-file-react-app/" />
+
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="React Fundamentals" />
+  <meta name="twitter:title" content="React Fundamentals" />
+
+  <meta property="og:description"
+    content="Learn React's fundamentals with billionaires, fractal trees, and none of the buzzwords." />
+  <meta name="twitter:description"
+    content="Learn React's fundamentals with billionaires, fractal trees, and none of the buzzwords." />
+
+  <meta property="og:url" content="https://frontarm.com/courses/react-fundamentals/basics/one-file-react-app/" />
+  <meta property="og:site_name" content="Frontend Armory" />
+
+  <meta property="og:image" content="https://frontarm.com/static/media/one-file-app-social.f096ddbc.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://frontarm.com/static/media/one-file-app-social.f096ddbc.png" />
+
+  <meta name="twitter:site" content="@frontendarmory" />
+
+
+
+  <link rel="stylesheet" type="text/css" href="/static/css/2-fb9d535f9ae1a4419300.css">
+
+</head>
+
+<body>
+  <div id="root">
+    <div class="SiteChrome__25oqE5">
+      <div class="LoadingBar__2jXdoZ loading__3QodWY"></div>
+      <header class="nav__1v6qJ8"><a class="HomeLink__198QKV " href="/"><span class="brand"><img
+              src="/static/media/logo-clean-white@2x.0f92e99e.png" class="logo__3Wpd1I" /><span
+              class="react__3fHGa_">Frontend</span>Armory</span></a>
+        <div class="links__3Rrc8F"><a class="NavLinkShell__1R669s  " href="/latest/">Blog</a><a
+            class="NavLinkShell__1R669s  " href="/demoboard/">Demoboard</a><a class="NavLinkShell__1R669s  "
+            href="/learn/">Learning Resources</a></div>
+        <div class="SiteMobileMenu__Rn2Afc">
+          <div class="toggle__3YhFO4">
+            <div class="hamburger__2FhJLG"></div>
+          </div>
+          <div class="slide__x7MVKS">
+            <div class="inner__22g3XK"><a class="HomeLink__198QKV " href="/"><span class="brand"><img
+                    src="/static/media/logo-clean-white@2x.0f92e99e.png" class="logo__3Wpd1I" /><span
+                    class="react__3fHGa_">Frontend</span>Armory</span></a>
+              <div class="mobile-links"><a class="NavLinkShell__1R669s  " href="/latest/">Blog</a><a
+                  class="NavLinkShell__1R669s  " href="/demoboard/">Demoboard</a><a class="NavLinkShell__1R669s  "
+                  href="/learn/">Learning Resources</a></div>
+              <div class="mobile-logged-out"><a class="NavLinkShell__1R669s  " href="/pricing/">Go Pro</a><a
+                  class="NavLinkShell__1R669s  "
+                  href="/members/login/?redirectTo=%2Fcourses%2Freact-fundamentals%2Fbasics%2Fone-file-react-app%2F">Log
+                  In</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="CourseLessonPageLayout__OdzUu-">
+        <section class="CourseSidebar__-XKuv2 Outline__q_v63N">
+          <div class="toggle__1bWbB0"><span class="icon-list"></span>A 2-minute React app</div>
+          <div class="sidebar__21pEP5">
+            <div class="header">
+              <div class="header__top__1MNA6Y"><a class="header__title__2v1fp- "
+                  href="/courses/react-fundamentals/">React Fundamentals</a></div>
+              <div class="header__progressBar__1PP2hh">
+                <div style="width:0%" class="header__progressInner__1Ixj3m"></div>
+              </div>
+            </div>
+            <div class="scrollbar-container tableOfContents__1UdYJG">
+              <section class="section__1O0xk0 active__3RloO7">
+                <div class="section__heading__3aPRHI">The Basics</div>
+                <div class="section__children">
+                  <section class="page__vJUYpw active__3RloO7">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ" href="/courses/react-fundamentals/basics/one-file-react-app/"><span
+                          class="icon-play page__icon__3GyGBO"></span>
+                        <div class="page__title">A 2-minute app</div>
+                      </a></div>
+                    <div class="page__children__2oDaw3">
+                      <section class="sectionHeading__1WAKPW"><a class="sectionHeading__link__3op9gx"
+                          href="#step-1">Step 1</a></section>
+                      <section class="sectionHeading__1WAKPW"><a class="sectionHeading__link__3op9gx"
+                          href="#step-2">Step 2</a></section>
+                      <section class="sectionHeading__1WAKPW"><a class="sectionHeading__link__3op9gx"
+                          href="#step-3">Step 3</a></section>
+                    </div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ" href="/courses/react-fundamentals/basics/elements-are-objects/"><span
+                          class="icon-document page__icon__3GyGBO"></span>
+                        <div class="page__title">Elements (are objects)</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ" href="/courses/react-fundamentals/basics/props-and-styling/"><span
+                          class="icon-document page__icon__3GyGBO"></span>
+                        <div class="page__title">Props and Styling</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ" href="/courses/react-fundamentals/basics/what-about-jsx/"><span
+                          class="icon-document page__icon__3GyGBO"></span>
+                        <div class="page__title">What is JSX?</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ" href="/courses/react-fundamentals/basics/try-out-jsx/"><span
+                          class="icon-code page__icon__3GyGBO"></span>
+                        <div class="page__title">Try out JSX</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ" href="/courses/react-fundamentals/basics/create-react-app/"><span
+                          class="icon-document page__icon__3GyGBO"></span>
+                        <div class="page__title">Create React App</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ" href="/courses/react-fundamentals/basics/imports-and-jsx/"><span
+                          class="icon-document page__icon__3GyGBO"></span>
+                        <div class="page__title">Imports and JSX</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ" href="/courses/react-fundamentals/basics/lists-and-loops/"><span
+                          class="icon-document page__icon__3GyGBO"></span>
+                        <div class="page__title">Lists and Loops</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/basics/conditional-rendering/"><span
+                          class="icon-document page__icon__3GyGBO"></span>
+                        <div class="page__title">Conditional rendering</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/basics/spiral-fizzbuzz-exercise/"><span
+                          class="icon-code page__icon__3GyGBO"></span>
+                        <div class="page__title">Let&#x27;s play Spiral FizzBuzz!</div>
+                      </a></div>
+                  </section>
+                </div>
+              </section>
+              <section class="section__1O0xk0">
+                <div class="section__heading__3aPRHI">Components</div>
+                <div class="section__children">
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ" href="/courses/react-fundamentals/components/custom-types/"><span
+                          class="icon-document page__icon__3GyGBO"></span>
+                        <div class="page__title">Custom types</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/components/function-components/"><span
+                          class="icon-document page__icon__3GyGBO"></span>
+                        <div class="page__title">Function components</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/components/nesting-with-children/"><span
+                          class="icon-document page__icon__3GyGBO"></span>
+                        <div class="page__title">Nesting with <code>children</code></div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ" href="/courses/react-fundamentals/components/jsx-components/"><span
+                          class="icon-document page__icon__3GyGBO"></span>
+                        <div class="page__title">Components and JSX</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/components/fractal-tree-exercise/"><span
+                          class="icon-code page__icon__3GyGBO"></span>
+                        <div class="page__title">A fractal tree</div>
+                      </a></div>
+                  </section>
+                </div>
+              </section>
+              <section class="section__1O0xk0">
+                <div class="section__heading__3aPRHI">How React Works</div>
+                <div class="section__children">
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/how-react-works/updating-rendered-elements/"><span
+                          class="icon-document page__icon__3GyGBO"></span>
+                        <div class="page__title">Updating rendered elements</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/how-react-works/reactdom-render/"><span
+                          class="icon-document page__icon__3GyGBO"></span>
+                        <div class="page__title">How <code>render</code> works</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/how-react-works/animated-fractal-tree-exercise/"><span
+                          class="icon-code page__icon__3GyGBO"></span>
+                        <div class="page__title">Animate the fractal tree</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/how-react-works/controlled-and-uncontrolled-components/"><span
+                          class="icon-document page__icon__3GyGBO"></span>
+                        <div class="page__title">Controlled and uncontrolled components</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/how-react-works/keys-and-arrays/"><span
+                          class="icon-document page__icon__3GyGBO"></span>
+                        <div class="page__title">Keys and arrays</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/how-react-works/tour-of-generated-project/"><span
+                          class="icon-document page__icon__3GyGBO"></span>
+                        <div class="page__title">How Create React App works</div>
+                      </a></div>
+                  </section>
+                </div>
+              </section>
+              <section class="section__1O0xk0">
+                <div class="section__heading__3aPRHI">Events, state and effects</div>
+                <div class="section__children">
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/events-state-effects/event-handlers/"><span
+                          class="icon-document page__icon__3GyGBO"></span>
+                        <div class="page__title">Event handlers</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/events-state-effects/sway-with-mouse-exercise/"><span
+                          class="icon-code page__icon__3GyGBO"></span>
+                        <div class="page__title">Sway with the mouse</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/events-state-effects/use-state/"><span
+                          class="icon-document page__icon__3GyGBO"></span>
+                        <div class="page__title">Component state</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/events-state-effects/shyness/"><span
+                          class="icon-code page__icon__3GyGBO"></span>
+                        <div class="page__title">Shyness</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/events-state-effects/introducing-hooks/"><span
+                          class="icon-document page__icon__3GyGBO"></span>
+                        <div class="page__title">Introducing hooks</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/events-state-effects/effects/"><span
+                          class="icon-document page__icon__3GyGBO"></span>
+                        <div class="page__title">Effects</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/events-state-effects/a-self-contained-tree/"><span
+                          class="icon-code page__icon__3GyGBO"></span>
+                        <div class="page__title">A self-contained tree</div>
+                      </a></div>
+                  </section>
+                </div>
+              </section>
+              <section class="section__1O0xk0">
+                <div class="section__heading__3aPRHI">Structure and patterns</div>
+                <div class="section__children">
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/structure-and-patterns/the-app-component/"><span
+                          class="page__wip__47gFcm">wip</span>
+                        <div class="page__title">The <code>App</code> component</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/structure-and-patterns/custom-events/"><span
+                          class="page__wip__47gFcm">wip</span>
+                        <div class="page__title">Custom events</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/structure-and-patterns/forms-and-validation/"><span
+                          class="page__wip__47gFcm">wip</span>
+                        <div class="page__title">Forms and validation</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/structure-and-patterns/fetching-data/"><span
+                          class="page__wip__47gFcm">wip</span>
+                        <div class="page__title">Fetching data</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/structure-and-patterns/structure/"><span
+                          class="page__wip__47gFcm">wip</span>
+                        <div class="page__title">Structuring state and components</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl">
+                      <div class="page__placeholder__1UyENw"><span class="icon-document page__icon__3GyGBO"></span>
+                        <div class="page__title">React context<small class="page__note__IYNCu1">Coming Soon</small>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/structure-and-patterns/finishing-off-exercise/"><span
+                          class="page__wip__47gFcm">wip</span>
+                        <div class="page__title">Let&#x27;s build an app</div>
+                      </a></div>
+                  </section>
+                </div>
+              </section>
+              <section class="section__1O0xk0">
+                <div class="section__heading__3aPRHI">Odds and ends</div>
+                <div class="section__children">
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/odds-and-ends/class-components/"><span
+                          class="page__wip__47gFcm">wip</span>
+                        <div class="page__title">Class components</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/odds-and-ends/state-and-this/"><span
+                          class="page__wip__47gFcm">wip</span>
+                        <div class="page__title"><code>setState</code> and <code>this</code></div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/odds-and-ends/binding-class-methods/"><span
+                          class="page__wip__47gFcm">wip</span>
+                        <div class="page__title">Binding class methods</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/odds-and-ends/lifecycle-methods/"><span
+                          class="page__wip__47gFcm">wip</span>
+                        <div class="page__title">Lifecycle methods</div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ"
+                        href="/courses/react-fundamentals/odds-and-ends/proptypes-and-defaultprops/"><span
+                          class="icon-document page__icon__3GyGBO"></span>
+                        <div class="page__title"><code>propTypes</code> and <code>defaultProps</code></div>
+                      </a></div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl">
+                      <div class="page__placeholder__1UyENw"><span class="icon-document page__icon__3GyGBO"></span>
+                        <div class="page__title">The <code>useRef</code> hook<small class="page__note__IYNCu1">Coming
+                            Soon</small></div>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl">
+                      <div class="page__placeholder__1UyENw"><span class="icon-document page__icon__3GyGBO"></span>
+                        <div class="page__title">Portals and modals<small class="page__note__IYNCu1">Coming Soon</small>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="page__vJUYpw">
+                    <div class="page__item__16jHHl"><input type="checkbox" class="page__checkbox__1cZ_TP" /><a
+                        class="page__link__2s_LdZ" href="/courses/react-fundamentals/odds-and-ends/where-next/"><span
+                          class="icon-document page__icon__3GyGBO"></span>
+                        <div class="page__title">Where to next?</div>
+                      </a></div>
+                  </section>
+                </div>
+              </section>
+            </div>
+            <footer><a class="next__1m2fbU " href="/courses/react-fundamentals/basics/elements-are-objects/">Complete
+                lesson and continue</a></footer>
+          </div>
+        </section>
+        <div id="top" class="CourseLessonPageLayoutBody__xHGVZI">
+          <div class="doc-Gutter-JpNfb   doc-top-none-24eq7 doc-bottom-none-1bRVR CourseLessonLayoutHeader__3Zv-vw">
+            <h1 class="title__ALk5y0">An app in one file</h1>
+          </div>
+          <div class="content__fiaQpQ">
+            <div class="Wrapper__3c-PJD doc-Doc-18aNW doc-align-left-when-narrow-3qEP2 ">
+              <aside class="doc-Aside-QiMiD ">
+                <div class="doc-Block-3i__D  YouTube__1nBE49 ">
+                  <div class="video__3qn5fx"><iframe src="https://www.youtube.com/embed/tgY9l8G1i_8?rel=0"
+                      frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen=""></iframe></div>
+                  <div class="caption__3s2lSj"></div>
+                </div>
+              </aside>
+              <p>Have you worked with JavaScript, CSS and HTML before? Great! That means you can do this exercise!</p>
+              <p>The result of this exercise is a single HTML file, which contains your first React app. There are three
+                steps, starting with:</p>
+              <h2 id="step-1"><a class="HeadingLink__39jIW0  " href="#step-1">#</a>Step 1</h2>
+              <p>Copy this HTML into a new file and save it somewhere:</p>
+              <div class="doc-Block-3i__D  CodeBlock__1xycEO light__2tLvPC">
+                <pre
+                  class="doc-Gutter-JpNfb doc-left-half-14M2Q doc-right-half-8dGco doc-top-half-2rWII doc-bottom-half-2diuu language-markup"><code><span class="token doctype">&lt;!DOCTYPE html></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>I'm a React app!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>root<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://unpkg.com/react@16.9.0/umd/react.production.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://unpkg.com/react-dom@16.9.0/umd/react-dom.production.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+              </div>
+              <p>This HTML file does two important things – it creates the div where your rendered content will live
+                (with the id <code>root</code>), and it loads the two library files where React lives.</p>
+              <p>With that done, let’s move on to…</p>
+              <h2 id="step-2"><a class="HeadingLink__39jIW0  " href="#step-2">#</a>Step 2</h2>
+              <p>Type this script into a new <code>&lt;script&gt;</code> tag at the end of your HTML file.</p>
+              <div class="doc-Block-3i__D  Details__3TdSzs ">
+                <h5 class="title__CkFv8W">Why type it out instead of copy and paste?</h5>
+                <p>Typing forces you to process each of the individual commands, drilling them into your head in the
+                  process – while copying and pasting just gives you a short feeling of cleverness and a shot of
+                  dopamine. And if you just want dopamine, quit reading and play flappy bird or something.</p>
+              </div>
+              <div class="doc-Block-3i__D  CodeBlock__1xycEO light__2tLvPC">
+                <pre
+                  class="doc-Gutter-JpNfb doc-left-half-14M2Q doc-right-half-8dGco doc-top-half-2rWII doc-bottom-half-2diuu language-jsx"><code><span class="token comment">// The `React` variable is set by the first `&lt;script>` tag</span>
+<span class="token comment">// in the above HTML file.</span>
+<span class="token keyword">let</span> createElement <span class="token operator">=</span> React<span class="token punctuation">.</span>createElement
+
+<span class="token keyword">let</span> rootElement <span class="token operator">=</span>
+  <span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> 
+    <span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'h1'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">"Contacts"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'ul'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token function">createElement</span><span class="token punctuation">(</span>
+        <span class="token string">'li'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function">createElement</span><span class="token punctuation">(</span>
+          <span class="token string">'a'</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span> href<span class="token punctuation">:</span> <span class="token string">'mailto:james@frontarm.com'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token string">"James Nelson"</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token function">createElement</span><span class="token punctuation">(</span>
+        <span class="token string">'li'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function">createElement</span><span class="token punctuation">(</span>
+          <span class="token string">'a'</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span> href<span class="token punctuation">:</span> <span class="token string">'mailto:me@example.com'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token string">"Me"</span>
+        <span class="token punctuation">)</span>
+      <span class="token punctuation">)</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">)</span>
+
+<span class="token comment">// The `ReactDOM` variable is set by the second `&lt;script>` tag</span>
+<span class="token comment">// in the above HTML file</span>
+<span class="token keyword">let</span> domNode <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span>
+
+  
+    <script type="text/javascript" src="/static/js/runtime~main-fb9d535f9ae1a4419300.js"></script>
+  
+    <script type="text/javascript" src="/static/js/2-e692aa1aad4c09518d5d.chunk.js"></script>
+  
+    <script type="text/javascript" src="/static/js/87-cbc1d1a1c2bc565b86b2.chunk.js"></script>
+  
+    <script type="text/javascript" src="/static/js/85-e5dc73bd193d65054df2.chunk.js"></script>
+  
+
+  <script>
+    window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+    ga('create', 'UA-123360919-1', 'auto');
+
+    // Replace the following lines with the plugins you want to use.
+    ga('require', 'eventTracker');
+    ga('require', 'outboundLinkTracker');
+    ga('require', 'urlChangeTracker');
+    // ...
+
+    ga('send', 'pageview');
+  </script>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
+    <script async src="/gat.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+</html>

@@ -1,10 +1,28 @@
-import Exersice from "#/#lesson/components/Article/Exersice";
+import Exercise from "#/#lesson/components/Article/Exersice";
 import { memo, useState } from "react";
 import Markdown from "components/Markdown/Markdown";
 import "public/styles/Markdown.css";
+const article = `Bizning \`input\` xozircha xoxlagan matin turdagi ma’lumot turini o’z ichiga olishi mumkun. Agar \`input\` - imiz faqat son yoki bir aniq turdagi ma’lumot turini qabul qilishi uchun \`type\` attributidan foydalanib, qiymatiga ma’lumot qanday turda bo’lishligi kerakligini buyursak, u o’ziga faqatgina shu turdagi ma’lumotni oladi:
 
+\`\`\`html
+<form method="POST">
+	<input placeholder="Foydalanuchi ismi:" />
+
+	<input type="number" />
+</form>
+\`\`\`
+
+- *number* - o’zb: son
+
+:::main{#success}
+
+O’z ismingiz \`type="number"\` bo’lgan inputga yozib ko’ring
+
+:::
+
+Natijada biz faqat sonlarnigina kirita olamiz. Ma’lumot turini yozish dasturimizga qo’shimcha ximoya olib keladi, sababi sondan boshqa ma’lumot turini kiritishga yo’l qo’yilmaydi,va keraksiz ma’lumot kiritishdan saqlaydi (Odam yoshini kiritiladigan joyiga, ismini yoki to’g’ri kelmaydigan ma’lumot turi bo’lmaydi).`;
 function Article(props) {
-  const [markdown] =
+  const [markdownn] =
     useState(`Tartibli ro’yxatlar bir jarayondagi turli bosqichlarni, yoki bir nechta ma’lumotlarni ketma-ketlikda sanab o‘tish, va elementlarni birinchidan oxirigacha tartibli holda sanab o’tish uchun kerak bo’ladi.
 
 1. Sport 30 min ⚽
@@ -12,19 +30,28 @@ function Article(props) {
 3. Ovqatlanish 30 min 🍗
 
 Shu turdagi tartiblangan roʻyxatlar \`<ol>\` Ota-Ona elementi bilan boshlanib, va uning ichiga istalgan sonli \`<li>\` elementlar kiritiladi. Ro’yxatni tugallash uchun \`</ol>\` oxirida yoziladi:
+
+~~~html
+<ol>
+	<li>Sport 30 min ⚽</li>
+	<li>HTML ni o’rganish 1.5 soat 🧑‍💻</li>
+	<li>Ovqatlanish 30 min 🍗</li>
+</ol>
+~~~
 `);
+  const markdown = article;
   return (
     <div className="h-full overflow-auto" style={{ width: props.width }}>
       <article className="px-3" id="article">
-        <h1 className="py-7">Tartibli Ro’yxat</h1>
+        <h1 className="py-7">Rasmlar</h1>
 
         <Markdown src={markdown} />
       </article>
 
       <div className="exercsices pb-20">
-        <div className="title | flex items-end | px-4 | bg-[#EEEEEE] w-full h-14 fc space-x-5">
+        <div className="title | flex items-end | px-4 | bg-[#EEEEEE] w-full h-10 fc space-x-5">
           <svg
-            className="h-7 w-7"
+            className="h-6 w-6"
             viewBox="0 0 25 25"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -36,9 +63,9 @@ Shu turdagi tartiblangan roʻyxatlar \`<ol>\` Ota-Ona elementi bilan boshlanib, 
               fill="#05192D"
             />
           </svg>
-          <h1 className="font-bold text-lg text-gray-primary">Vazifalar</h1>
+          <h1 className="font-bold text-gray-primary">Vazifalar</h1>
         </div>
-        <Exersice
+        <Exercise
           completed={true}
           body={`Great work! Kelvin can now publish his forecasts in *Celsius and Fahrenheit*.
 If you’d like extra practice, try this:
@@ -82,7 +109,7 @@ Xar birini yangi qatorlarga otqazish uchun alohida \`p\` teglari orasiga joylaym
 Agar ikkala mashqni xam uddalagan bo'lsangiz, Barakalla!`}
         />
 
-        <Exersice
+        <Exercise
           completed={false}
           body={`Under the heading that says \`Countries with Large Brown Bear Populations\`, add an ordered list.
          

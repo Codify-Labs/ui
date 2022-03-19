@@ -9,7 +9,7 @@ function Container(props) {
 }
 
 function Body(props) {
-  return <main {...props} className={`${props.className}`} />;
+  return <div {...props} className={`${props.className}`} />;
 }
 
 function Header(props) {

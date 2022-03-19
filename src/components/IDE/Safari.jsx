@@ -10,7 +10,6 @@ export default function Safari(props) {
   useEffect(() => {
     const msg = window.addEventListener("message", function (response) {
       if (response.data && response.data.source === "iframe") {
-        console.log(response.data, "===");
         setResult((res) => res.concat(response.data));
       }
     });
@@ -48,20 +47,49 @@ export default function Safari(props) {
         _log.apply(console, arguments);
       };
   `;
+
   return (
-    <div className="w-1/2 h-full flex flex-col items-stretch">
-      <div className="px-5 py-4 | flex items-center justify-between">
-        <div className="menu flex items-center justify-center">
-          <ul className="flex items-center justify-center">
-            <li className="w-3 h-3 rounded-full bg-[#F96057]"></li>
-            <li className="w-3 h-3 rounded-full bg-[#F8CE52] | mx-2"></li>
-            <li className="w-3 h-3 rounded-full bg-[#5FCF65]"></li>
-          </ul>
+    <div className="w-full h-full flex flex-col items-stretch">
+      <div className="px-5 py-1 z-40 | flex items-center justify-between | shadow-sm">
+        <div className="menu fc space-x-3">
+          <div
+            className="actions click:scale | hover:bg-gray-100 duration-100 p-1 rounded-sm"
+            onClick={props.onUrlBack}
+          >
+            <svg
+              className="h-5 rotate-180"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8.32502 4.30157C8.52648 4.11271 8.8429 4.12291 9.03176 4.32437L14.0318 9.6577C14.2121 9.85003 14.2121 10.1493 14.0318 10.3416L9.03176 15.675C8.8429 15.8764 8.52648 15.8866 8.32502 15.6978C8.12357 15.5089 8.11336 15.1925 8.30223 14.991L12.9816 9.99967L8.30223 5.00831C8.11336 4.80685 8.12357 4.49044 8.32502 4.30157Z"
+                fill="#05192D"
+              />
+            </svg>
+          </div>
+          <div className="actions click:scale | hover:bg-gray-100 duration-100 p-1 rounded-sm">
+            <svg
+              className="h-5"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8.32502 4.30157C8.52648 4.11271 8.8429 4.12291 9.03176 4.32437L14.0318 9.6577C14.2121 9.85003 14.2121 10.1493 14.0318 10.3416L9.03176 15.675C8.8429 15.8764 8.52648 15.8866 8.32502 15.6978C8.12357 15.5089 8.11336 15.1925 8.30223 14.991L12.9816 9.99967L8.30223 5.00831C8.11336 4.80685 8.12357 4.49044 8.32502 4.30157Z"
+                fill="#05192D"
+              />
+            </svg>
+          </div>
         </div>
-        <div className="search flex items-center justify-between px-8 py-2 bg-[#f2f2f2] rounded-[7px]">
+        <div className="search flex items-center justify-between px-5 flex-grow mx-5 py-1 bg-[#f2f2f2] rounded-[7px]">
           <div className="lock">
             <svg
-              className="w-3"
+              className="w-2.5"
               viewBox="0 0 8 11"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -74,57 +102,42 @@ export default function Safari(props) {
               />
             </svg>
           </div>
-          <p className="text-center text-sm text-[#797979] pl-6 select-none	">
-            {props.url || "localhost:3000/index.html"}
-          </p>
+          <input
+            type="text"
+            name="url"
+            id="url"
+            className="focus:outline-none outline-none | py-1 px-3 | rounded-[7px] ml-6 w-full | text-sm"
+            placeholder="/"
+          />
         </div>
-        <div className="actions click:scale">
+        <div
+          className="actions click:scale | hover:bg-gray-100 duration-100 p-1 rounded-sm"
+          onClick={props.onRefresh}
+        >
           <svg
-            className="w-5"
-            viewBox="0 0 16 15"
+            className="h-4"
+            viewBox="0 0 15 15"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M14.9991 7.71621H6.36908"
-              stroke="#BBBBBB"
-              stroke-width="1.07508"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M12.9014 5.62628L15 7.71623L12.9014 9.80618"
-              stroke="#BBBBBB"
-              stroke-width="1.07508"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M11.1064 4.49758C10.8699 1.93173 9.90953 1 6.08942 1C1.00001 1 1.00001 2.65562 1.00001 7.62964C1.00001 12.6037 1.00001 14.2593 6.08942 14.2593C9.90953 14.2593 10.8699 13.3275 11.1064 10.7617"
-              stroke="#BBBBBB"
-              stroke-width="1.07508"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M1.8501 7.5001C1.8501 4.6647 4.05992 1.8501 7.5001 1.8501C10.2784 1.8501 11.6516 3.90652 12.2368 5.00012H10.5001C10.224 5.00012 10.0001 5.22398 10.0001 5.50012C10.0001 5.77626 10.224 6.00012 10.5001 6.00012H13.5001C13.7763 6.00012 14.0001 5.77626 14.0001 5.50012V2.50012C14.0001 2.22398 13.7763 2.00012 13.5001 2.00012C13.224 2.00012 13.0001 2.22398 13.0001 2.50012V4.3133C12.2956 3.07138 10.6661 0.850098 7.5001 0.850098C3.43728 0.850098 0.850098 4.1855 0.850098 7.5001C0.850098 10.8147 3.43728 14.1501 7.5001 14.1501C9.44394 14.1501 11.0623 13.381 12.2146 12.2085C12.8316 11.5807 13.3134 10.8391 13.642 10.0408C13.7471 9.78548 13.6252 9.49327 13.3699 9.38818C13.1145 9.28308 12.8223 9.4049 12.7172 9.66026C12.4364 10.3426 12.0252 10.9746 11.5014 11.5076C10.5296 12.4964 9.16516 13.1501 7.5001 13.1501C4.05992 13.1501 1.8501 10.3355 1.8501 7.5001Z"
+              fill="#05192D"
             />
           </svg>
         </div>
       </div>
 
-      <div className="w-full h-full overflow-auto">
+      <div className="w-full h-full overflow-auto" id="codify-iframe-parent">
         {/* FRAME */}
         <iframe
-          srcDoc={`
-            <script>
-              ${customLogs}
-
-              ${props.template === "js" ? props.src : ""}
-            </script>
-
-            ${props.template === "html" ? props.src : ""}
-          `}
           frameBorder="0"
           height="100%"
           width="100%"
+          id={`codifyuz`}
+          className={`codifyuz`}
         ></iframe>
         {/* FRAME */}
       </div>
@@ -134,12 +147,14 @@ export default function Safari(props) {
           onClick={() => setConsoleActive(!consoleActive)}
         >
           <div className="console:icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" className="h-5 mr-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 44 44"
+              className="h-5 mr-2"
+            >
               <g data-name="Layer 2">
                 <g>
-                  <path
-                    d="M20 25a1 1 0 00-.41-.79l-8-6A1 1 0 0011 18a1 1 0 00-1 1 1 1 0 00.41.79L17.33 25l-6.93 5.2a1 1 0 00-.4.8 1 1 0 001 1 1 1 0 00.59-.21l8-6A1 1 0 0020 25zM40 0H4a4 4 0 00-4 4v36a4 4 0 004 4h36a4 4 0 004-4V4a4 4 0 00-4-4zm2 40a2 2 0 01-2 2H4a2 2 0 01-2-2V4a2 2 0 012-2h36a2 2 0 012 2zm-15-8h-6a1 1 0 000 2h6a1 1 0 000-2z"
-                  ></path>
+                  <path d="M20 25a1 1 0 00-.41-.79l-8-6A1 1 0 0011 18a1 1 0 00-1 1 1 1 0 00.41.79L17.33 25l-6.93 5.2a1 1 0 00-.4.8 1 1 0 001 1 1 1 0 00.59-.21l8-6A1 1 0 0020 25zM40 0H4a4 4 0 00-4 4v36a4 4 0 004 4h36a4 4 0 004-4V4a4 4 0 00-4-4zm2 40a2 2 0 01-2 2H4a2 2 0 01-2-2V4a2 2 0 012-2h36a2 2 0 012 2zm-15-8h-6a1 1 0 000 2h6a1 1 0 000-2z"></path>
                 </g>
               </g>
             </svg>
@@ -204,11 +219,12 @@ export default function Safari(props) {
               {result.length > 0 &&
                 result.map((res, index) => (
                   <div
-                    className={`flex py-2 px-2 border-b-2 border-gray-300 ${typeof res.message[0] === "object" ||
-                        typeof res.message[0] === "array"
+                    className={`flex py-2 px-2 border-b-2 border-gray-300 ${
+                      typeof res.message[0] === "object" ||
+                      typeof res.message[0] === "array"
                         ? "items-center"
                         : "items-center"
-                      }`}
+                    }`}
                   >
                     {res.message.map((r) => (
                       <div className="mr-5">

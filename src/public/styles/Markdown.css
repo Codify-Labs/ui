@@ -1,3 +1,6 @@
+
+
+
 #article {
     font-family: "JetBrains Mono", monospace;
     @apply select-text;
@@ -32,7 +35,7 @@
 }
 
 #article ol {
-    @apply list-decimal pb-7 pl-6;
+    @apply list-decimal pl-7;
 }
 
 #article p,
@@ -44,7 +47,7 @@
 }
 
 #article ul {
-    @apply list-disc ml-4 pb-7;
+    @apply list-disc ml-4;
 }
 
 #article ol li {
@@ -52,13 +55,14 @@
 }
 
 #article li {
-    @apply pb-2 leading-7;
+    @apply leading-7 pb-3;
 }
 
 #article code {
     @apply text-gray-primary bg-gray-200 p-1 rounded-sm text-xs tracking-wider;
     word-wrap: normal !important;
     font-family: "JetBrains Mono", monospace;
+    color: #05192D !important;
 }
 
 #article code::after,
@@ -123,6 +127,7 @@
 }
 
 #article>pre {
+    @apply block;
     height: auto !important;
 }
 
@@ -158,7 +163,6 @@
     background-color: #f3fff3;
 }
 
-#success * {
+#success p {
     color: #03a700 !important;
 }
-
