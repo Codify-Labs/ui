@@ -1,0 +1,168 @@
+
+
+
+#article {
+    font-family: "Space Mono", monospace;
+    @apply select-text;
+}
+
+#article h1 {
+    @apply text-4xl font-extrabold pb-7;
+}
+
+#article h2 {
+    @apply text-3xl font-semibold pb-7;
+}
+
+#article h3 {
+    @apply text-2xl font-semibold pb-7;
+}
+
+#article h4 {
+    @apply text-xl font-semibold pb-7;
+}
+
+#article h5 {
+    @apply text-lg font-semibold pb-7;
+}
+
+#article img {
+    @apply w-full border border-gray-50;
+}
+
+#article h6 {
+    @apply text-sm font-semibold pb-7;
+}
+
+#article ol {
+    @apply list-decimal pl-7;
+}
+
+#article p,
+#article li {
+    @apply pb-7;
+    line-height: 1.9;
+    font-size: 0.9rem;
+    color: #000000d1;
+}
+
+#article ul {
+    @apply list-disc ml-4;
+}
+
+#article ol li {
+    @apply list-item;
+}
+
+#article li {
+    @apply leading-7 pb-3;
+}
+
+#article code {
+    @apply text-gray-primary bg-gray-200 p-1 rounded-sm text-xs tracking-wider;
+    word-wrap: normal !important;
+    font-family: monospace;
+    color: #05192D !important;
+}
+
+#article code::after,
+#article code::before {
+    content: "";
+}
+
+#article em {
+    @apply text-[#017AFF] not-italic font-extrabold;
+}
+
+#article a {
+    @apply text-[#017AFF] not-italic font-extrabold border-b-2 border-dashed border-[#017AFF] hover:bg-blue-50 duration-200;
+}
+
+#article table {
+    @apply mb-7;
+    width: 100%;
+    table-layout: auto;
+    text-align: left;
+    font-size: 0.875em;
+    line-height: 1.7142857;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#article thead {
+    @apply bg-gray-50;
+    color: #111827;
+    font-weight: 600;
+    border-bottom-width: 1px;
+    border-bottom-color: #d1d5db;
+}
+
+#article thead th {
+    vertical-align: bottom;
+    padding-right: 0.5714286em;
+    padding-bottom: 0.5714286em;
+    padding-top: 0.5714286em;
+    padding-left: 0.5714286em;
+}
+
+#article tbody tr {
+    border-bottom-width: 1px;
+    border-bottom-color: #e5e7eb;
+}
+
+#article tbody tr:last-child {
+    border-bottom-width: 0;
+}
+
+#article tbody td {
+    vertical-align: top;
+    padding-top: 0.5714286em;
+    padding-right: 0.5714286em;
+    padding-bottom: 0.5714286em;
+    padding-left: 0.5714286em;
+}
+
+#article hr {
+    @apply my-12;
+}
+
+#article>pre {
+    @apply block;
+    height: auto !important;
+}
+
+#warn {
+    @apply border border-[#bd8800];
+    background-color: rgba(255, 255, 0, 0.2);
+}
+
+#warn * {
+    color: #bd8800 !important;
+}
+
+#info {
+    @apply border border-[#1758ff];
+    background-color: #e8efff;
+}
+
+#info * {
+    color: #1758ff !important;
+}
+
+#error {
+    @apply border border-[#fe0000];
+    background-color: #fff1f1;
+}
+
+#error * {
+    color: #fe0000 !important;
+}
+
+#success {
+    @apply border border-[#03A700];
+    background-color: #f3fff3;
+}
+
+#success p {
+    color: #03a700 !important;
+}

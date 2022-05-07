@@ -1,0 +1,260 @@
+:root {
+    --default: #FFFFFF;
+    --background: #05192d;
+  }
+  html {
+    --default: #f9fafb;
+    --background: #05192d;
+  }
+  .language-label {
+    background: #05192D;
+  }
+  .copy-to-clipboard,
+  .fullscreen {
+    display: none;
+  }
+  .code-block-container:hover .copy-to-clipboard,
+  .code-block-container:hover .fullscreen {
+    display: block;
+  }
+  .live-editor,
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-align: left;
+    white-space: pre !important;
+    word-spacing: normal;
+    word-break: break-all;
+    word-wrap: normal;
+    color: var(--default);
+    background: var(--background);
+    font-family: "JetBrains Mono", monospace;
+  
+    font-size: 1rem;
+    line-height: 2em;
+    font-variant-ligatures: no-common-ligatures;
+    overflow-x: scroll;
+    position: relative;
+    height: 100%;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    box-sizing: border-box;
+  }
+  
+  @media only screen and (min-width: 600px) {
+    pre[class*="language-"],
+    code[class*="language-"] {
+      font-size: 0.9rem;
+    }
+  
+    #article code[class*="language-"],
+    #article pre[class*="language-"] {
+      font-size: 0.8rem;
+    }
+    pre[class*="language-"] {
+      padding: 1.5em;
+    }
+  }
+  
+  pre[class*="language-"] {
+    padding: 2em;
+    overflow: auto;
+  }
+  
+  .line-highlight {
+    padding-left: 21px;
+    --tw-bg-opacity: 1;
+    background-color: rgba(129, 140, 248, var(--tw-bg-opacity));
+    --tw-bg-opacity: 0.1;
+    --tw-border-opacity: 1;
+    border-color: rgba(129, 140, 248, var(--tw-border-opacity));
+  }
+  .dark .line-highlight {
+    --tw-border-opacity: 1;
+    border-color: rgba(255, 225, 0, var(--tw-border-opacity));
+  }
+  .line-highlight {
+    border-left-width: 4px;
+  }
+  
+  .CODY-EDITOR {
+    padding: 1rem !important;
+  }
+  
+  .codejar-linenumbers {
+    background: #f5f6f9 !important;
+    mix-blend-mode: unset !important;
+    color: #f4d546 !important;
+    left: -3px !important;
+    z-index: 10 !important;
+  }
+  
+  .codejar-wrap {
+    height: 100%;
+  }
+  .codejar-wrap div {
+    height: 100%;
+  }
+  
+  .language-css > code,
+  .language-sass > code,
+  .language-scss > code {
+      color: #fd9170;
+  }
+  
+  [class*="language-"] .namespace {
+      opacity: 0.7;
+  }
+  
+  .token.atrule {
+      color: #c792ea;
+  }
+  
+  .token.attr-name {
+      color: #ffcb6b;
+  }
+  
+  .token.attr-value {
+      color: #c3e88d;
+  }
+  
+  .token.attribute {
+      color: #c3e88d;
+  }
+  
+  .token.boolean {
+      color: #c792ea;
+  }
+  
+  .token.builtin {
+      color: #ffcb6b;
+  }
+  
+  .token.cdata {
+      color: #80cbc4;
+  }
+  
+  .token.char {
+      color: #80cbc4;
+  }
+  
+  .token.class {
+      color: #ffcb6b;
+  }
+  
+  .token.class-name {
+      color: #F86C4D;
+  }
+  
+  .token.color {
+      color: #f2ff00;
+  }
+  
+  .token.comment {
+      color: #48A431;
+  }
+  
+  .token.constant {
+      color: #c792ea;
+  }
+  
+  .token.deleted {
+      color: #f07178;
+  }
+  
+  .token.doctype {
+      color: #546e7a;
+  }
+  
+  .token.entity {
+      color: #f07178;
+  }
+  
+  .token.function {
+      color: #FF47C1;
+  }
+  
+  .token.hexcode {
+      color: #f2ff00;
+  }
+  
+  .token.id {
+      color: #c792ea;
+      font-weight: bold;
+  }
+  
+  .token.important {
+      color: #c792ea;
+      font-weight: bold;
+  }
+  
+  .token.inserted {
+      color: #80cbc4;
+  }
+  
+  .token.keyword {
+      color: #FFE144;
+  }
+  
+  .token.number {
+      color: #fd9170;
+  }
+  
+  .token.operator {
+      color: #6DD4C8;
+  }
+  
+  .token.prolog {
+      color: #546e7a;
+  }
+  
+  .token.property {
+      color: #80cbc4;
+  }
+  
+  .token.pseudo-class {
+      color: #c3e88d;
+  }
+  
+  .token.pseudo-element {
+      color: #c3e88d;
+  }
+  
+  .token.punctuation {
+      color: #89ddff;
+  }
+  
+  .token.regex {
+      color: #f2ff00;
+  }
+  
+  .token.selector {
+      color: #f07178;
+  }
+  
+  .token.string {
+      color: #c3e88d;
+  }
+  
+  .token.symbol {
+      color: #c792ea;
+  }
+  
+  .token.tag {
+      color: #f07178;
+  }
+  
+  .token.unit {
+      color: #f07178;
+  }
+  
+  .token.url {
+      color: #fd9170;
+  }
+  
+  .token.variable {
+      color: #f07178;
+  }
