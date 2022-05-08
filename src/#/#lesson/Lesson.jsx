@@ -14,30 +14,9 @@ import chai from "chai";
 window.chai = chai;
 
 const config = {
-  files: {
-    "/index.html": {
-      code: `<!DOCTYPE html>
-<html>
-  <head>
-  </head>
-  <body>
-      <h1>Alhamdulillah!</h1>
-  </body>
-</html>
-`.trim(),
-    },
-    "/index.js": {
-      code: `import "./style.css"`,
-    },
-    "/style.css": {
-      code: `h1 {
-  color: blue;
-  border-bottom: 1px dotted blue;
-}`.trim(),
-    },
-  },
+  files: {},
   dependencies: {},
-  entry: "index.js",
+  template: `react`,
 };
 
 const tests = {
