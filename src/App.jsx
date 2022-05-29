@@ -9,6 +9,7 @@ import Workspace from "#/#workspace";
 import Course from "#/#course";
 import CourseResume from "#/#course_resume";
 import useScrollToTop from "helpers/scrollToTop";
+import Auth from "#/#auth";
 
 function App() {
   useScrollToTop();
@@ -18,6 +19,10 @@ function App() {
       <Switch>
         <Route path="/" exact>
           <Home />
+        </Route>
+
+        <Route path="/auth/:method" exact>
+          <Auth />
         </Route>
 
         <Route path="/lesson/:slug" exact>

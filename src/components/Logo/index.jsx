@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
 
 function Logo(props) {
+  const logoClassName = ["h-6", props.className].join(" ");
+
   return (
     <Link className="fc" to={`/`}>
       <svg
         viewBox="0 0 40 19"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="h-6"
+        {...props}
+        className={logoClassName}
       >
         <rect
           x="32.4196"
