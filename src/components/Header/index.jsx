@@ -24,7 +24,7 @@ function Header(props) {
         </ul>
       </nav>
 
-      <Link to={`/auth`}>
+      <Link to={`/auth/register`}>
         <button className="fcc rounded-full | text-base font-bold text-blue-700">
           <h3>Kirish</h3>
 

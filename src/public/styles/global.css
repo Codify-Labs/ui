@@ -1,10 +1,5 @@
-.click\:scale {
-  cursor: pointer;
-}
-
 .click\:scale:active {
-  transition: all 175ms ease-in;
-  transform: scale(0.95);
+  @apply duration-200 active:scale-95 cursor-pointer;
 }
 
 ::-webkit-scrollbar {
