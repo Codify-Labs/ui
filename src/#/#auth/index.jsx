@@ -9,12 +9,85 @@ import SvgGoogle from "icons/SvgGoogle";
 import SvgPerson from "icons/SvgPerson";
 import SvgPhone from "icons/SvgPhone";
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 import iff from "utils/iff";
 
 function Auth(props) {
   const [step, setStep] = useState(1);
   const history = useHistory();
+  let { method } = useParams();
+
+  if (method === `login`) {
+    return (
+      <section className="container | h-full w-full | flex flex-col justify-between">
+        <div className="go__home | py-5">
+          <Logo />
+        </div>
+
+        <div className="fcc flex-1">
+          <div className="w-2/5 space-y-7 px-12 py-7  shadow-300 auth__card rounded-lg">
+            <h3 className="font-bold text-3xl">Akkountga kirish</h3>
+
+            <div className="flex flex-col space-y-7">
+              <label htmlFor="phone" className="relative space-y-3">
+                <p className="text-[#949494] text-sm">Telefon raqam:</p>
+                <div className="relative">
+                  <input
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    placeholder="+998 __ - ___ __ __"
+                    className="w-full | border border-opacity-50 focus:border-opacity-100 border-gray-primary py-3 px-3 duration-200"
+                  />
+                  <SvgPhone className="text-gray-primary h-5 | absolute right-5 top-[30%]" />
+                </div>
+              </label>
+
+              <label htmlFor="password" className="relative space-y-3">
+                <p className="text-[#949494] text-sm">Kirish uchun parol:</p>
+
+                <div className="relative">
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="+998 __ - ___ __ __"
+                    className="w-full | border border-opacity-50 focus:border-opacity-100 border-gray-primary py-3 px-3 duration-200"
+                  />
+                  <SvgEye className="text-gray-primary h-3.5 | absolute right-5 top-[36%]" />
+                </div>
+              </label>
+
+              <button
+                onClick={() => setStep(2)}
+                className="py-3 bg-gray-primary text-white font-bold | click:scale fcc"
+              >
+                Kirish
+              </button>
+            </div>
+
+            <p className="text-[#949494] text-sm">
+              Akkauntingiz yo’qmi?{" "}
+              <Link to={`/auth/register`} className={`text-blue-700 px-3`}>
+                Ro’yhattan o’tish
+              </Link>
+            </p>
+
+            <div className="fcb">
+              <div className="flex-1 border border-opacity-70 border-[#C4C4C4]"></div>
+              <p className="text-[#949494] text-sm | mx-10">Yoki</p>
+              <div className="flex-1 border border-opacity-70 border-[#C4C4C4]"></div>
+            </div>
+
+            <button className="py-2 text-lg border border-gray-primary text-gray-primary font-bold | click:scale w-full fcc">
+              <SvgGoogle className="text-white h-6 mr-5" />
+              Google bilan
+            </button>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   if (step === 1) {
     return (
@@ -52,9 +125,9 @@ function Auth(props) {
 
             <p className="text-[#949494] text-sm">
               Platformada royhatta birmisiz?{" "}
-              <a href="#" className="text-blue-700 px-3">
+              <Link to={`/auth/login`} className={`text-blue-700 px-3`}>
                 Kirish
-              </a>
+              </Link>
             </p>
 
             <div className="fcb">

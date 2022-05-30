@@ -8,7 +8,7 @@ function CourseResume() {
     let redirector;
     redirector = setTimeout(() => {
       history.push(`/lesson/react-jsx/`);
-    }, 2000);
+    }, 100000);
 
     return () => {
       clearTimeout(redirector);

@@ -28,7 +28,7 @@ button, input, textarea {
 }
 
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   font-family: "Space Mono", monospace;
   @apply select-none;
   -webkit-font-smoothing: antialiased;
@@ -147,4 +147,26 @@ html {
   100% {
     transform: translateX(0%) translateY(0%);
   }
+}
+
+.fade {
+  @apply h-full w-full;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  @apply duration-200;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  @apply duration-200;
 }
