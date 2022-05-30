@@ -15,6 +15,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 function App() {
   useScrollToTop();
   let location = useLocation();
+
   return (
     <>
       <TransitionGroup className={`h-full w-full`}>

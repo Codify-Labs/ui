@@ -159,7 +159,7 @@ html {
 
 .fade-enter-active {
   opacity: 1;
-  @apply duration-200;
+  @apply duration-300;
 }
 
 .fade-exit {
@@ -168,5 +168,5 @@ html {
 
 .fade-exit-active {
   opacity: 0;
-  @apply duration-200;
+  @apply duration-300;
 }

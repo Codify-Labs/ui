@@ -4,8 +4,11 @@ import { Link } from "react-router-dom";
 import Progress from "./cmp/Progress";
 import CourseCard from "./cmp/CourseCard";
 import Header from "components/Header";
+import useScrollToTop from "helpers/scrollToTop";
 
 function Home(props) {
+  useScrollToTop();
+
   return (
     <App className="scroll-white">
       <App.Header className="bg-glass-100">
